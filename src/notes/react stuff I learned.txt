@@ -1,0 +1,1 @@
+1. We need to restart the server if we change the tsconfig.json file.
