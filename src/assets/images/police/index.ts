@@ -1,0 +1,13 @@
+export { default as fever_img } from "./fever.png";
+export { default as full_img } from "./full.png";
+export { default as give_up_img } from "./give-up.png";
+export { default as happy_img } from "./happy.png";
+export { default as hello_img } from "./hello.png";
+export { default as laugh_img } from "./laugh.png";
+export { default as mocking_img } from "./mocking.png";
+export { default as ok_img } from "./ok.png";
+export { default as sad_img } from "./sad.png";
+export { default as shocked_img } from "./shocked.png";
+export { default as sing_img } from "./sing.png";
+export { default as yawn_img } from "./yawn.png";
+export { default as yes_img } from "./yes.png";

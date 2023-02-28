@@ -1,0 +1,62 @@
+[================ IMAGES ================]
+
+[================ /images/home ================]
+https://www.flaticon.com/free-sticker/photo-editing_4359857
+https://www.flaticon.com/free-sticker/programming_9394530
+https://www.flaticon.com/free-sticker/programming_8662557
+https://www.flaticon.com/free-sticker/business_4593636
+https://www.flaticon.com/free-sticker/digital-painting_4359906
+https://www.flaticon.com/free-sticker/design-software_4359784
+https://www.flaticon.com/free-sticker/update_6858092
+https://www.flaticon.com/free-sticker/animation_6485811
+https://www.flaticon.com/free-sticker/office_6119673
+https://www.flaticon.com/free-sticker/office_6119852
+https://www.flaticon.com/free-sticker/laptop_8060665
+https://www.flaticon.com/free-sticker/television_6183648
+https://www.flaticon.com/free-sticker/retro_5928440
+https://www.flaticon.com/free-sticker/office_6119572
+https://www.flaticon.com/free-sticker/responsive-website_6858076
+
+
+[================ /images/errors ================]
+https://www.flaticon.com/free-sticker/404-error_9821299
+https://www.flaticon.com/free-sticker/eat_7858260
+https://www.flaticon.com/free-sticker/busy_9799842
+https://www.flaticon.com/free-sticker/security_9394534
+
+
+[================ /images/others ================]
+https://www.flaticon.com/free-sticker/website_9821269
+https://www.flaticon.com/free-sticker/website_9821342
+https://www.flaticon.com/free-sticker/searching_8348896
+https://www.flaticon.com/free-sticker/web-development_7648318
+https://www.flaticon.com/free-sticker/coding_6858041
+https://www.flaticon.com/free-sticker/copywriting_7749210
+https://www.flaticon.com/free-sticker/update_9394544
+https://www.flaticon.com/free-sticker/ecommerce_4481144
+https://www.flaticon.com/free-sticker/hiring_5272933
+https://www.flaticon.com/free-sticker/setting_9394540
+
+
+[================ /images/weather ================]
+https://www.freepik.com/free-vector/weather-icons-flat-set_3815822.htm#query=weather%20icon&position=8&from_view=keyword&track=ais
+
+
+[================ /images/police ================]
+https://www.flaticon.com/free-sticker/yes_7858327
+https://www.flaticon.com/free-sticker/happy_7858284
+https://www.flaticon.com/free-sticker/laugh_7858297
+https://www.flaticon.com/free-sticker/ok_7858312
+https://www.flaticon.com/free-sticker/fever_7858266
+https://www.flaticon.com/free-sticker/full_7858272
+https://www.flaticon.com/free-sticker/give-up_7858278
+https://www.flaticon.com/free-sticker/peace_7858315
+https://www.flaticon.com/free-sticker/sad_7858318
+https://www.flaticon.com/free-sticker/yawn_7858326
+https://www.flaticon.com/free-sticker/hello_7858290
+https://www.flaticon.com/free-sticker/shocked_7858321
+https://www.flaticon.com/free-sticker/mocking_7858306
+https://www.flaticon.com/free-sticker/sing_7858324
+https://www.flaticon.com/free-sticker/love_7858301
+https://www.flaticon.com/free-sticker/birthday_7858253
+https://www.flaticon.com/free-sticker/yoga_7858328

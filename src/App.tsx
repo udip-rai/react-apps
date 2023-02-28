@@ -1,9 +1,16 @@
 import * as React from "react";
-import { ChakraProvider, theme } from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
 import { MainRoute } from "routes";
+import ErrorBoundary from "components/errors/ErrorBoundary";
+import { ThemeOne } from "assets/themes/theme1";
+import { CustomColorsProvider } from "context";
 
 export const App = () => (
-  <ChakraProvider theme={theme}>
-    <MainRoute />
-  </ChakraProvider>
+  <ErrorBoundary>
+    <ChakraProvider theme={ThemeOne}>
+      <CustomColorsProvider>
+        <MainRoute />
+      </CustomColorsProvider>
+    </ChakraProvider>
+  </ErrorBoundary>
 );

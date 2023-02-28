@@ -1,0 +1,12 @@
+export { default as admin_panel_png } from "./admin-panel.png";
+export { default as busy_img } from "./busy.png";
+export { default as coding_img } from "./coding.png";
+export { default as copywriting_img } from "./copywriting.png";
+export { default as download_img } from "./download.png";
+export { default as ecommerce_img } from "./ecommerce.png";
+export { default as hiring_img } from "./hiring.png";
+export { default as searching_img } from "./searching.png";
+export { default as setting_img } from "./setting.png";
+export { default as web_development_img } from "./web-development.png";
+export { default as website_img } from "./website.png";
+export { default as website1_img } from "./website1.png";

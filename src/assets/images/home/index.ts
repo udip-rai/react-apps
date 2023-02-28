@@ -1,0 +1,14 @@
+export { default as animation_img } from "./animation.png";
+export { default as business_img } from "./business.png";
+export { default as design_software_img } from "./design-software.png";
+export { default as digital_painting_img } from "./digital-painting.png";
+export { default as laptop_img } from "./laptop.png";
+export { default as office_img } from "./office.png";
+export { default as office1_img } from "./office1.png";
+export { default as photo_editing_img } from "./photo-editing.png";
+export { default as programming_img } from "./programming.png";
+export { default as programming1_img } from "./programming1.png";
+export { default as retro_img } from "./retro.png";
+export { default as televison_img } from "./television.png";
+export { default as update_img } from "./update.png";
+export { default as responsive_website_img } from "./responsive-website.png";
