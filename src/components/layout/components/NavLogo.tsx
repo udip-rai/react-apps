@@ -10,10 +10,18 @@ export const NavLogo = () => {
           <Image boxSize="100%" objectFit="cover" src={laptop_img} />
         </Center>
       </NavLink>
-      <Text fontSize="lg" fontWeight="bold" position="absolute" right={0}>
+      <Text
+        fontSize="lg"
+        fontWeight="900"
+        position="absolute"
+        right="15px"
+        lineHeight="18px"
+      >
         Udip
         <br />
-        <Text as="span">Rai</Text>
+        <Text as="span" color="red">
+          Rai
+        </Text>
       </Text>
     </Flex>
   );

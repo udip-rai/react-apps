@@ -10,12 +10,15 @@ export const gridCards = {
 };
 
 export const cardFlex = (props: StyleFunctionProps) => ({
-  boxSize: 250,
+  w: 150,
+  h: 250,
   borderRadius: "xl",
   flexDirection: "column",
   justifyContent: "center",
   justifySelf: "center",
   textAlign: "center",
+  fontSize: "md",
+  fontWeight: "bold",
   div: {
     w: "full",
     h: "185px",
@@ -28,14 +31,9 @@ export const cardFlex = (props: StyleFunctionProps) => ({
         transition: "0.2s ease-in-out",
       },
     },
-    ".card-btn": {
-      w: "full",
-      borderRadius: "xl",
-      borderTopRadius: 0,
-      "&:hover": {
-        color: mode("black", "white")(props),
-        bg: mode("white", "black")(props),
-      },
-    },
+  },
+  ".card-btn": {
+    bg: mode("red.300", "bright_red")(props),
+    fontSize: "sm",
   },
 });

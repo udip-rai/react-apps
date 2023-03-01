@@ -1,0 +1,75 @@
+{
+  "latitude": 27.76,
+  "longitude": 85.36,
+  "continent": "Asia",
+  "continentCode": "AS",
+  "localityLanguageRequested": "en",
+  "city": "",
+  "countryName": "Nepal",
+  "countryCode": "NP",
+  "postcode": "",
+  "principalSubdivision": "Bagmati",
+  "principalSubdivisionCode": "NP-P3",
+  "plusCode": "7MV7Q966+22",
+  "locality": "Budhanilkantha",
+  "localityInfo": {
+    "administrative": [
+      {
+        "name": "Nepal",
+        "description": "country in South Asia",
+        "order": 3,
+        "adminLevel": 2,
+        "isoCode": "NP",
+        "wikidataId": "Q837",
+        "geonameId": 1282988
+      },
+      {
+        "name": "Bagmati",
+        "description": "province of Nepal",
+        "order": 4,
+        "adminLevel": 3,
+        "isoCode": "NP-P3",
+        "wikidataId": "Q25104015",
+        "geonameId": 12095449
+      },
+      {
+        "name": "Bagmati Zone",
+        "description": "former administrative zone of Nepal",
+        "order": 5,
+        "adminLevel": 5,
+        "wikidataId": "Q9046",
+        "geonameId": 1283710
+      },
+      {
+        "name": "Kathmandu District",
+        "description": "district of Nepal",
+        "order": 6,
+        "adminLevel": 6,
+        "wikidataId": "Q797472",
+        "geonameId": 1283241
+      },
+      {
+        "name": "Budhanilkantha",
+        "order": 7,
+        "adminLevel": 7
+      }
+    ],
+    "informative": [
+      {
+        "name": "Asia",
+        "description": "continent on Earth, mainly on the Earth's northeastern quadrant",
+        "order": 1,
+        "isoCode": "AS",
+        "wikidataId": "Q48",
+        "geonameId": 6255147
+      },
+      {
+        "name": "Tibetan Plateau",
+        "description": "plateau in Central Asia",
+        "order": 2,
+        "wikidataId": "Q179842",
+        "geonameId": 1280231
+      }
+    ]
+  }
+}

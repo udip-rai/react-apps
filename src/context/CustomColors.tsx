@@ -1,6 +1,6 @@
 import { useColorModeValue } from "@chakra-ui/react";
 import { createContext, useEffect, useState } from "react";
-import { CustomColorsProviderProps } from "schemas/apps/ContextSchema";
+import { CustomColorsProviderProps } from "schemas/ContextSchema";
 
 export const CustomColorsContext = createContext<any | null>(null);
 
@@ -9,50 +9,25 @@ export const CustomColorsProvider = (props: CustomColorsProviderProps) => {
   const [myColors, setMyColors] = useState<any>();
 
   // List of colors
-  const logo = useColorModeValue("space_cherry", "lime_green"),
-    title = useColorModeValue("good_blue", "cyber_yellow"),
-    header = useColorModeValue("pumpkin", "blue_atoll"),
-    para = useColorModeValue("gray.700", "new_white"),
-    span = useColorModeValue("gray.500", "primary.200"),
-    extra1 = useColorModeValue("forest_biome", "landing_light"),
-    blue = useColorModeValue("yale_blue", "sky_blue"),
-    red = useColorModeValue("cherry_tomato", "rapture_rose"),
-    yellow = useColorModeValue("vibrant_yellow", "mellow_yellow"),
-    orange = useColorModeValue("dark_orange", "turkish_blue"),
-    green = useColorModeValue("forest_green", "moss_green"),
+  const title = useColorModeValue("pumpkin", "blue_atoll"),
+    header = useColorModeValue("good_blue", "cyber_yellow"),
+    paragraph = useColorModeValue("gray.700", "new_white"),
+    span = useColorModeValue("gray.500", "purple.200"),
     light = useColorModeValue("gray.50", "gray.800"),
-    dark = useColorModeValue("gray.800", "gray.50");
+    dark = useColorModeValue("gray.800", "gray.50"),
+    crimson_orange = useColorModeValue("space_cherry", "pumpkin");
 
   useEffect(() => {
     setMyColors({
-      logo,
       title,
       header,
-      para,
+      paragraph,
       span,
       light,
-      blue,
-      green,
-      yellow,
-      orange,
-      red,
       dark,
+      crimson_orange,
     });
-  }, [
-    logo,
-    title,
-    header,
-    para,
-    span,
-    extra1,
-    blue,
-    red,
-    green,
-    yellow,
-    orange,
-    light,
-    dark,
-  ]);
+  }, [title, header, paragraph, span, light, dark, crimson_orange]);
 
   return (
     <CustomColorsContext.Provider value={{ myColors }}>

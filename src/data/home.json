@@ -1,0 +1,22 @@
+{
+  "0": [
+    {
+      "title": "Programming",
+      "img": "home/programming.png",
+      "href": "/programming",
+      "license": "https://www.flaticon.com/free-sticker/responsive-website_6858076"
+    },
+    {
+      "title": "Apps",
+      "img": "home/retro.png",
+      "href": "/apps",
+      "license": "https://www.flaticon.com/free-sticker/retro_5928440"
+    },
+    {
+      "title": "Websites",
+      "img": "home/design-software.png",
+      "href": "/websites",
+      "license": "https://www.flaticon.com/free-sticker/design-software_4359784"
+    }
+  ]
+}

@@ -7,6 +7,6 @@ export { default as ecommerce_img } from "./ecommerce.png";
 export { default as hiring_img } from "./hiring.png";
 export { default as searching_img } from "./searching.png";
 export { default as setting_img } from "./setting.png";
-export { default as web_development_img } from "./web-development.png";
 export { default as website_img } from "./website.png";
+export { default as web_development_img } from "./web-development.png";
 export { default as website1_img } from "./website1.png";

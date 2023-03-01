@@ -25,4 +25,21 @@
 - Also forgot to wrap the component with Context Provider. Solved all the pertaining issues.
 - Downloaded tons of free pics from & SVG images:
   - [FlatIcon](https://www.flaticon.com/)
-  - [FreePik] (https://www.freepik.com/)
+  - [FreePik](https://www.freepik.com/)
+
+## Commit 03
+
+### git commit -m "03 - Major changes in responsive design with components, hooks & contexts"
+
+- Divided the weather app into 3 major components and other sub-components as per need.
+- Put responsive design on every component with Global CSS stylings.
+- Created a context to change the color for dark/light mode across the whole project.
+- Frontend part of weather app completed
+- Created a json file in the project which I copied from postman so
+  - I can test the values like in the real API
+  - A lot of API calls will result in API not working
+  - The real API will replace the json making it dynamic later
+- Added to utils part which contain logical operations like-
+  - temperature in C or F, fulldate & time from UNIX timestamp
+  - find weather conditon based on the values
+  - find the weather image based on the weather conditon etc.

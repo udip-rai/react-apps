@@ -1,6 +1,6 @@
 import { Grid } from "@chakra-ui/react";
 import { CardFlex } from "components/global";
-import homeJson from "data/home_page/home.json";
+import homeJson from "data/home.json";
 
 export const HomePage = () => {
   return (

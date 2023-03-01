@@ -1,13 +1,12 @@
 import { Button, Center, Flex, Image, Text } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
-import { CardFlexProps } from "schemas/apps/GlobalSchema";
+import { CardFlexProps } from "schemas/GlobalSchema";
 
 export const CardFlex = (props: CardFlexProps) => {
   const { title, img, href } = props;
 
   return (
     <Flex className="card-flex">
-      <Text textStyle="p">{title}</Text>
       <Center>
         <Image
           className="remove-blur"
@@ -17,7 +16,7 @@ export const CardFlex = (props: CardFlexProps) => {
       </Center>
       <NavLink to={href}>
         <Button className="card-btn">
-          <Text textStyle="span">See more</Text>
+          <Text>{title}</Text>
         </Button>
       </NavLink>
     </Flex>

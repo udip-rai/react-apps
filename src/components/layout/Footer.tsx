@@ -11,7 +11,7 @@ export const Footer = () => {
         <NavLink to="https://github.com/udip-rai">
           <Text
             as="span"
-            color={myColors?.logo}
+            color={myColors?.crimson_orange}
             _hover={{ color: "good_blue" }}
           >
             Udip

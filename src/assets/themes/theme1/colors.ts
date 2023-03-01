@@ -1,5 +1,15 @@
 export const colors = {
   // Some Custom Colors
+
+  light: "#a9adb2",
+  lighter: "#d2d4d7",
+  dark: "#4d5560",
+  darker: "#19202b",
+  space_cherry: "#990011FF",
+  cherry_tomato: "#ED2B33FF",
+  bright_red: "#F93822FF",
+  raspberry: "#D64161FF",
+
   independance: "#4D516D",
   cornflower_blue: "#6693F5",
   airforce_blue: "#598BAF",
@@ -36,16 +46,14 @@ export const colors = {
   aspen_gold: "#FFD662FF",
   princess_blue: "#00539CFF",
   cyber_yellow: "#FDD20EFF",
-  bright_red: "#F93822FF",
+
   navy_blue: "#333D79FF",
   sky_blue: "#89ABE3FF",
   electric_blue_lemonade: "#0063B2FF",
   aqua_marine: "#9CC3D5FF",
   forest_green: "#2C5F2D",
   moss_green: "#97BC62FF",
-  raspberry: "#D64161FF",
-  space_cherry: "#990011FF",
-  cherry_tomato: "#ED2B33FF",
+
   rapture_rose: "#D85A7FFF",
   lime_punch: "#D6ED17FF",
   blooming_dahlia: "#E69A8DFF",
