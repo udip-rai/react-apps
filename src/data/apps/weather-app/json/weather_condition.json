@@ -1,0 +1,93 @@
+[
+  {
+    "name": "01d",
+    "img": "clear_sky.svg",
+    "msg": "clear sky (day)"
+  },
+  {
+    "name": "01n",
+    "img": "clear_sky.svg",
+    "msg": "clear sky (night)"
+  },
+  {
+    "name": "02d",
+    "img": "few_clouds.svg",
+    "msg": "few clouds (day)"
+  },
+  {
+    "name": "02n",
+    "img": "few_clouds.svg",
+    "msg": "few clouds (night)"
+  },
+  {
+    "name": "03d",
+    "img": "scattered_clouds.svg",
+    "msg": "scattered clouds (day)"
+  },
+  {
+    "name": "03n",
+    "img": "scattered_clouds.svg",
+    "msg": "scattered clouds (night)"
+  },
+  {
+    "name": "04d",
+    "img": "broken_clouds.svg",
+    "msg": "broken clouds (day)"
+  },
+  {
+    "name": "04n",
+    "img": "broken_clouds.svg",
+    "msg": "broken clouds (night)"
+  },
+
+  {
+    "name": "09d",
+    "img": "group_drizzle.svg",
+    "msg": "id 3xx drizzle (day)"
+  },
+  {
+    "name": "09n",
+    "img": "shower_rain.svg",
+    "msg": "shower rain (night)"
+  },
+  {
+    "name": "10d",
+    "img": "group_rain.svg",
+    "msg": "id 5xx rain (day)"
+  },
+  {
+    "name": "10n",
+    "img": "rain.svg",
+    "msg": "rain (night)"
+  },
+  {
+    "name": "11d",
+    "img": "group_thunderstorm.svg",
+    "msg": "id 2xx thunderstorm (day)"
+  },
+  {
+    "name": "11n",
+    "img": "thunderstorm.svg",
+    "msg": "thunderstorm (night)"
+  },
+  {
+    "name": "13d",
+    "img": "group_snow.svg",
+    "msg": "id 6xx snow (day)"
+  },
+  {
+    "name": "13n",
+    "img": "snow.svg",
+    "msg": "snow (night)"
+  },
+  {
+    "name": "50d",
+    "img": "group_atmosphere.png",
+    "msg": "id 6xx atmosphere (day)"
+  },
+  {
+    "name": "50n",
+    "img": "mist.svg",
+    "msg": "mist (night)"
+  }
+]

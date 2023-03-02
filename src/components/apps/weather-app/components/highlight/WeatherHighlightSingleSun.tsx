@@ -11,7 +11,7 @@ export const WeatherHighlightSingleSun = (
   return (
     <Stack direction="column" spacing={0} align="center">
       <Image boxSize="75%" objectFit="contain" src={img} />
-      <Text textStyle="h6" lineHeight={0}>
+      <Text textStyle="p" lineHeight={0}>
         {time}
         <Text
           as="span"

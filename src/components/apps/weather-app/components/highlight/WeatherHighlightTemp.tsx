@@ -4,7 +4,7 @@ import { CustomColorsContext } from "context";
 import { useContext } from "react";
 import { WeatherHighlightTempProps } from "schemas/apps/WeatherAppSchema";
 import { iconSize } from "utils/constants";
-import { WeatherLocationMini } from "../current/WeatherLocationMini";
+import { WeatherCurrentLocation } from "../current/WeatherCurrentLocation";
 import { WeatherHighlightMain } from "./WeatherHighlightMain";
 
 export const WeatherHighlightTemp = (props: WeatherHighlightTempProps) => {
@@ -27,7 +27,7 @@ export const WeatherHighlightTemp = (props: WeatherHighlightTempProps) => {
         </Box>
       </Flex>
 
-      <WeatherLocationMini {...locationMiniTemp} />
+      <WeatherCurrentLocation {...locationMiniTemp} />
     </Flex>
   );
 };

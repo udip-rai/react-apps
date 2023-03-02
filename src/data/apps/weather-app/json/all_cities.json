@@ -1,4 +1,7 @@
 {
+  "remaining-cities-to-list": [
+    "Hokkaido"
+  ],
   "Afghanistan": [
     "Herat",
     "Kabul",
@@ -45596,7 +45599,34 @@
     "Walvis Bay",
     "Windhoek"
   ],
-  "Nepal": ["Bharatpur", "Jawlakhel", "Kathmandu", "Lumbini", "Palpa", "Patan"],
+  "Nepal": [
+    "Kathmandu",
+    "Pokhara",
+    "Jitpur",
+    "Birāṭnagar",
+    "Bharatpur",
+    "Birgañj",
+    "Butwāl",
+    "Dharān",
+    "Dhangaḍhi̇̄",
+    "Janakpur",
+    "Heṭauḍā",
+    "Bhaktapur",
+    "Īṭahari̇̄",
+    "Nepālgañj",
+    "Kirtipur",
+    "Bhairāhawā",
+    "Ṭikāpur",
+    "Gulariyā",
+    "Tulsīpur",
+    "Birendranagar",
+    "Hanumānnagar",
+    "Pālpā",
+    "Siraha",
+    "Panauti",
+    "Bidur",
+    "Godāwari̇̄"
+  ],
   "Netherlands": [
     "Aagtekerke",
     "Aalburg",

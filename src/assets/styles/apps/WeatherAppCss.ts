@@ -53,6 +53,15 @@ export const weatherCurrentCss = (props: StyleFunctionProps) => ({
         h: ["30px", "30px", "30px", "40px"],
         fontSize: ["20px", "20px", "20px", "25px"],
       },
+      // flexDirection: "column",
+      ".weather-current-suggestion": {
+        w: [110, 110, 180, 250],
+        h: 300,
+        position: "absolute",
+        bg: "violet",
+        top: ["30px", "30px", "30px", "40px"],
+        overflowY: "scroll",
+      },
       ".chakra-input": {
         h: ["30px", "30px", "30px", "40px"],
         bg: mode("gray.600", "gray.200")(props),

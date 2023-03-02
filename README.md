@@ -43,3 +43,13 @@
   - temperature in C or F, fulldate & time from UNIX timestamp
   - find weather conditon based on the values
   - find the weather image based on the weather conditon etc.
+
+### git commit -m "04 - Tested with json files for search functionality"
+
+- Converted objects to arrays with Object.values()
+- Converted 2d Array to 1d with Array.flat(1)
+- Used Axios to send GET requests (no post request unfortunately)
+- Added use-debounce yarn package for to control the time when search-box displays output
+- Actually Im not gonna use debounce. Gonna apply the good old hard-codin' everything
+- I also added a hook that makes component visible on click & closes when clicked anywhere else (except that component).
+- Added some toast messages for status messages

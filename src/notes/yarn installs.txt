@@ -5,3 +5,4 @@ yarn add @react-icons/all-files
 yarn add axios
 yarn add @fontsource/montserrat
 yarn add @fontsource/poppins
+yarn add use-debounce

@@ -1,8 +1,10 @@
 import { Flex, Image } from "@chakra-ui/react";
-import { WeatherSituationProps } from "schemas/apps/WeatherAppSchema";
-import { WeatherInfo } from "./WeatherInfo";
+import { WeatherCurrentSituationProps } from "schemas/apps/WeatherAppSchema";
+import { WeatherCurrentInfo } from "./WeatherCurrentInfo";
 
-export const WeatherSituation = (props: WeatherSituationProps) => {
+export const WeatherCurrentSituation = (
+  props: WeatherCurrentSituationProps
+) => {
   const { img, msg, relative } = props,
     info = {
       msg,
@@ -15,7 +17,7 @@ export const WeatherSituation = (props: WeatherSituationProps) => {
         boxSize="30px"
         src={require(`assets/images/apps/weather-app/${img}`)}
       />
-      <WeatherInfo {...info} />
+      <WeatherCurrentInfo {...info} />
     </Flex>
   );
 };

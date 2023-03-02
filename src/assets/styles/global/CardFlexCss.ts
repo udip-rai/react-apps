@@ -4,7 +4,7 @@ import { mode } from "@chakra-ui/theme-tools";
 export const gridCards = {
   gap: "40px",
   gridTemplateColumns: ["auto", "repeat(auto-fit, minMax(190px, 1fr))"],
-  justifyContent: "center",
+  justifyContent: "space-evenly",
   alignItems: "center",
   h: "100%",
 };

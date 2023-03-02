@@ -1,6 +1,6 @@
 import { GridItem, Flex, Image } from "@chakra-ui/react";
 import { WeatherCurrentImgProps } from "schemas/apps/WeatherAppSchema";
-import { WeatherInfo } from "./WeatherInfo";
+import { WeatherCurrentInfo } from "./WeatherCurrentInfo";
 
 export const WeatherCurrentImg = (props: WeatherCurrentImgProps) => {
   const { name, img, msg } = props,
@@ -14,7 +14,7 @@ export const WeatherCurrentImg = (props: WeatherCurrentImgProps) => {
       colSpan={[2, 2, 2, 1]}
     >
       <Flex flexDirection="column" gap={0}>
-        <WeatherInfo {...info} />
+        <WeatherCurrentInfo {...info} />
         <Image
           src={require(`assets/images/apps/weather-app/${img}`)}
           alt={name}

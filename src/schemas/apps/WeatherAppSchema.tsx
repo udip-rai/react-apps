@@ -1,6 +1,6 @@
 // Weather App
 
-export type WeatherLocationMiniProps = {
+export type WeatherCurrentLocationProps = {
   place: string;
   // Will update types later for any
   txtStyle: any;
@@ -32,7 +32,7 @@ export type SingleHighlightType = {
   status: string;
 };
 
-export type WeatherSituationProps = {
+export type WeatherCurrentSituationProps = {
   img?: string;
   msg?: string;
   relative: string;
@@ -103,14 +103,15 @@ export type WeatherHighlightSunProps = {
   moonsetTime: string;
 };
 
-export type WeatherTempDayTimeProps = {
+export type WeatherCurrentDateTempProps = {
   temperature: string;
   datetime: any;
   degree: string;
 };
 
 export type WeatherHightlightSingleProps = {
-  single: SingleHighlightType;
+  title: string;
+  unit: string;
   slider: SliderType;
   highlight: any;
   monster: string;
@@ -126,7 +127,7 @@ export type WeatherIconProps = {
   weatherIcon: any;
 };
 
-export type WeatherInfoProps = {
+export type WeatherCurrentInfoProps = {
   msg: string | undefined;
   relative: string;
 };

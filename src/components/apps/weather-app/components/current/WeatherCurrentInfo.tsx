@@ -1,11 +1,11 @@
 import { Flex, Text } from "@chakra-ui/react";
 import { CustomColorsContext } from "context";
 import { useContext } from "react";
-import { WeatherInfoProps } from "schemas/apps/WeatherAppSchema";
+import { WeatherCurrentInfoProps } from "schemas/apps/WeatherAppSchema";
 import { showFromMd } from "utils/constants";
 import { readableString } from "utils/logic";
 
-export const WeatherInfo = (props: WeatherInfoProps) => {
+export const WeatherCurrentInfo = (props: WeatherCurrentInfoProps) => {
   const { myColors } = useContext(CustomColorsContext),
     { msg, relative } = props,
     description = readableString(msg!, " ");

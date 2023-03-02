@@ -1,9 +1,9 @@
 import { Box, Text } from "@chakra-ui/react";
 import { CustomColorsContext } from "context";
 import { useContext } from "react";
-import { WeatherTempDayTimeProps } from "schemas/apps/WeatherAppSchema";
+import { WeatherCurrentDateTempProps } from "schemas/apps/WeatherAppSchema";
 
-export const WeatherTempDayTime = (props: WeatherTempDayTimeProps) => {
+export const WeatherCurrentDateTemp = (props: WeatherCurrentDateTempProps) => {
   const { myColors } = useContext(CustomColorsContext),
     { degree, temperature, datetime } = props,
     cDay = datetime?.day,

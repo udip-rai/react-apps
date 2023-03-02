@@ -2,15 +2,12 @@ import { GridItem, SimpleGrid, Text } from "@chakra-ui/react";
 import { WeatherHighlightProps } from "schemas/apps/WeatherAppSchema";
 import { unixToTimeStamp, compareWeather } from "utils/logic";
 import { pickMonster } from "utils/logic/pickMonster";
-import weatherHighlightsJson from "data/apps/weather-app/weather.json";
+import { weatherJson } from "data/apps/weather-app/json";
 import { WeatherHighlightSun } from "./WeatherHighlightSun";
 import { WeatherHighlightTemp } from "./WeatherHighlightTemp";
 import { WeatherHightlightSingle } from "./WeatherHightlightSingle";
 
 export const WeatherHighlight = (props: WeatherHighlightProps) => {
-  const weatherHighlights = weatherHighlightsJson[0].map((item) =>
-    Object.values(item).map((item1, i) => item1[i])
-  );
   const {
     degree,
     handleDegree,
@@ -64,12 +61,13 @@ export const WeatherHighlight = (props: WeatherHighlightProps) => {
       >
         <WeatherHighlightSun {...highlightSun} />
         <WeatherHighlightTemp {...highlightTemp} />
-        {weatherHighlights.map((item, i: number) => {
+        {weatherJson.map((item: any, i: number) => {
           return (
             <WeatherHightlightSingle
               key={Date.now() + Math.random()}
-              single={item[0].single[0]}
-              slider={item[0].slider[0]}
+              title={item.title}
+              unit={item.unit}
+              slider={item.slider}
               highlight={highlightSingle[i]}
               monster={handleMonster(highlightSingle[i])}
             />

@@ -1,51 +1,102 @@
-import { Grid } from "@chakra-ui/react";
+import { Grid, useToast } from "@chakra-ui/react";
 import { CustomSpinner } from "components/animations";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { WeatherCurrent } from "./components/current/WeatherCurrent";
 import { WeatherForecast } from "./components/forecast/WeatherForecast";
 import { WeatherHighlight } from "./components/highlight/WeatherHighlight";
-
-import weatherJson from "data/apps/weather-app/details_sample.json";
-import cityDetails from "data/apps/weather-app/city_details.json";
-import allCitiesJson from "data/apps/weather-app/all_cities.json";
-
 import {
   kelvinToC,
   kelvinToF,
   unixToTimeStamp,
   findWeatherIcon,
 } from "utils/logic";
+import { trimAndCapitalize } from "utils/logic/trimAndCapitalize";
+import { INVALID_CITY, VALID_CITY } from "utils/constants";
+import {
+  detailsSampleJson,
+  testCitiesJson,
+  allCitiesJson,
+  cityJson,
+} from "data/apps/weather-app/json";
+import { useComponentVisible } from "hooks/useComponentVisible";
 
 export const WeatherApp = () => {
-  const didMountRef = useRef<any>(false);
-  const [details, setDetails] = useState<any>(weatherJson);
+  const [details, setDetails] = useState<any>(detailsSampleJson);
   const [loading, setLoading] = useState<Boolean>(true);
   const [degree, setDegree] = useState<string>("C");
-  const [typedSearch, setTypedSearch] = useState<any>("");
+  const [inputChange, setInputChange] = useState<any>("");
+  const [inputDelay, setInputDelay] = useState<string>("");
+  const [displayInput, setDisplayInput] = useState<string>("");
+  const [suggestionBox, setSuggestionBox] = useState<any>("");
+  const didMountRef = useRef<any>(false);
+  const toast = useToast();
+  const { sgRef, setIsComponentVisible, isComponentVisible } =
+    useComponentVisible(true);
+
+  console.log(sgRef);
+  console.log(isComponentVisible);
 
   const handleDegree = (val: number) =>
     degree === "C" ? kelvinToC(val) : degree === "F" ? kelvinToF(val) : "error";
 
-  const handleTypedSearch = (e: any) => {
+  const handleTypedSearch = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      const inputVal = trimAndCapitalize(e?.currentTarget?.value);
 
-    // e.which === 13 ? 
-    // const filtered: any = Object.values(allCitiesJson).filter((item) =>
-    // item.includes("Kathmandu")
-  );
+      // Checking if the entered city exists or not
+      const filteredArr: any = testCitiesJson
+        .slice(0, 1)
+        .map((item) => item)[0];
 
-  // console.log(filtered[0].indexOf("Kathmandu"));
-    
-    // e.which === 13 && setTypedSearch(e?.currentTarget?.value);
-
+      filteredArr.name === inputVal
+        ? console.log("success")
+        : console.log("Error");
+    }
   };
 
-  // console.log("Searched stuff :", typedSearch);
+  const handleInputDelay = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    setInputDelay(e?.currentTarget?.value);
+    if (e.key === "Enter") {
+      const inputVal = trimAndCapitalize(e?.currentTarget?.value);
 
+      // Checking if the entered city exists or not
+      const filteredArr: any = testCitiesJson
+        .slice(0, 1)
+        .map((item) => item)[0];
 
+      if (filteredArr.name === inputVal) {
+        setInputDelay(inputVal);
+        setDisplayInput(inputVal);
 
-  // useEffect(() => {
-  //   if (!didMountRef.current) {
-  //     didMountRef.current = true;
+        toast(VALID_CITY);
+      } else {
+        toast(INVALID_CITY);
+      }
+    }
+  };
+
+  const handleInputSearch = (inputDelay: string) => {
+    const allCities = Object.values(allCitiesJson).flat(1);
+
+    const filtered = allCities?.filter(
+      (item) =>
+        item.slice(0, inputDelay.length).toLowerCase() ===
+        inputDelay.toLowerCase()
+    );
+    setSuggestionBox(filtered);
+    setInputChange(inputDelay);
+  };
+
+  const handleSuggestion = (e: any) => {
+    const target = e?.currentTarget?.innerHTML;
+    setInputDelay(target);
+    setDisplayInput(target);
+  };
+
+  useEffect(() => {
+    const timeoutId: any = setTimeout(() => handleInputSearch(inputDelay), 500);
+    return () => clearTimeout(timeoutId);
+  }, [inputDelay]);
 
   //     const OPEN_WEATHER_API_KEY = "b16e8052123fdc3a0619203be72674d8",
   //       getCordURL = `http://api.openweathermap.org/geo/1.0/direct?q=${CITY_NAME}&limit=1&appid=${OPEN_WEATHER_API_KEY}`;
@@ -64,8 +115,6 @@ export const WeatherApp = () => {
   //     };
 
   //     loadWeather();
-  //   }
-  // }, []);
 
   // console.log(weatherJson);
 
@@ -80,13 +129,21 @@ export const WeatherApp = () => {
     currentIcon = findWeatherIcon(details?.current?.weather[0]?.icon)[0],
     dailyIcon = findWeatherIcon(details?.daily[0]?.weather[0]?.icon)[0],
     hourlyIcon = findWeatherIcon(details?.hourly.at(-1)?.weather[0]?.icon)[0],
-    accuratePlace = `${cityDetails?.locality}, ${cityDetails?.localityInfo?.administrative[3]?.name}, ${cityDetails?.countryName}`;
+    accuratePlace = `${cityJson?.locality}, ${cityJson?.localityInfo?.administrative[3]?.name}, ${cityJson?.countryName}`;
 
   const weatherCurrent = {
       degree,
-      typedSearch,
+      inputDelay,
+      inputChange,
+      displayInput,
+      setInputChange,
       handleTypedSearch,
-      setTypedSearch,
+      handleInputDelay,
+      suggestionBox,
+      handleSuggestion,
+      sgRef,
+      isComponentVisible,
+      setIsComponentVisible,
       temperature,
       datetime,
       time,

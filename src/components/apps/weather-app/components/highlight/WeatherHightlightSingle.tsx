@@ -10,17 +10,17 @@ export const WeatherHightlightSingle = (
   props: WeatherHightlightSingleProps
 ) => {
   const { myColors } = useContext(CustomColorsContext);
-  const { single, slider, highlight, monster } = props;
+  const { title, unit, slider, highlight, monster } = props;
   const currentStatus = compareWeather(highlight[0], highlight[1]);
 
   return (
     <Flex className="today-highlight">
-      <Text color={myColors?.title}>{single.title}</Text>
+      <Text color={myColors?.title}>{title}</Text>
       <Flex className="main-highlight">
         <Box textStyle="display6">
           {highlight[1]}
           <Text as="span" textStyle="h6" color={myColors?.span}>
-            &nbsp;{single.unit}
+            &nbsp;{unit}
           </Text>
         </Box>
         <WeatherHighlightSlider
