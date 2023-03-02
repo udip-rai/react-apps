@@ -1,49 +1,33 @@
 import { GridItem, SimpleGrid, Text } from "@chakra-ui/react";
 import { WeatherHighlightProps } from "schemas/apps/WeatherAppSchema";
-import { unixToTimeStamp, compareWeather } from "utils/logic";
+import { compareWeather, calculateSunMoon } from "utils/logic";
 import { pickMonster } from "utils/logic/pickMonster";
 import { weatherJson } from "data/apps/weather-app/json";
 import { WeatherHighlightSun } from "./WeatherHighlightSun";
 import { WeatherHighlightTemp } from "./WeatherHighlightTemp";
 import { WeatherHightlightSingle } from "./WeatherHightlightSingle";
+import { calculateSunMoonDiff } from "../../../../../utils/logic/calculateSunMoon";
 
 export const WeatherHighlight = (props: WeatherHighlightProps) => {
-  const {
-    degree,
-    handleDegree,
-    humidity,
-    sunrise,
-    sunset,
-    wind_speed: wind,
-    temp,
-    visibility,
-    uvi,
-    moonrise,
-    moonset,
-    timezone,
-  } = props;
+  const { currentDay, dailyDay, degree, handleDegree, timezone } = props;
 
-  const sunriseTime = unixToTimeStamp(sunrise)?.time,
-    sunsetTime = unixToTimeStamp(sunset)?.time,
-    moonriseTime = unixToTimeStamp(moonrise)?.time,
-    moonsetTime = unixToTimeStamp(moonset)?.time,
-    minTemp = handleDegree(temp.min),
-    maxTemp = handleDegree(temp.max),
+  const sunMoonToday = calculateSunMoon(dailyDay[0]),
+    diff = calculateSunMoonDiff(dailyDay[0], dailyDay[1]),
+    minTemp = handleDegree(dailyDay[0].temp.min),
+    maxTemp = handleDegree(dailyDay[0].temp.max),
     minMax = { minTemp, maxTemp },
     unit = degree === "C" ? "C" : "F";
 
   const highlightSun = {
-      sunriseTime,
-      sunsetTime,
-      moonriseTime,
-      moonsetTime,
+      sunMoonToday,
+      diff,
     },
     highlightTemp = { minMax, unit, timezone },
     highlightSingle = [
-      ["wind", wind],
-      ["humidity", humidity],
-      ["visibility", visibility],
-      ["uvi", uvi],
+      ["wind", currentDay.wind_speed],
+      ["humidity", currentDay.humidity],
+      ["visibility", currentDay.visibility],
+      ["uvi", currentDay.uvi],
     ];
 
   const handleMonster = (arr: any[]) => {

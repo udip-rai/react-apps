@@ -6,21 +6,22 @@ import { WeatherHighlightSingleSunProps } from "schemas/apps/WeatherAppSchema";
 export const WeatherHighlightSingleSun = (
   props: WeatherHighlightSingleSunProps
 ) => {
-  const { myColors } = useContext(CustomColorsContext);
-  const { img, time, diff } = props;
+  const { myColors } = useContext(CustomColorsContext),
+    { img, time, diff } = props,
+    newDiff = diff[0] === "-" ? `-${diff}` : `+${diff}`;
   return (
     <Stack direction="column" spacing={0} align="center">
       <Image boxSize="75%" objectFit="contain" src={img} />
-      <Text textStyle="p" lineHeight={0}>
+      <Text textStyle="span" lineHeight={0} fontWeight="bold">
         {time}
         <Text
           as="span"
           textStyle="xsSpan"
-          color={myColors?.span}
           fontWeight="bold"
+          color={myColors?.span}
           lineHeight={0}
         >
-          &nbsp;&nbsp;-{diff}
+          &nbsp;&nbsp;{newDiff}
         </Text>
       </Text>
     </Stack>

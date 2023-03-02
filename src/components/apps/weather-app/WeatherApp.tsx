@@ -1,6 +1,6 @@
 import { Grid, useToast } from "@chakra-ui/react";
 import { CustomSpinner } from "components/animations";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { WeatherCurrent } from "./components/current/WeatherCurrent";
 import { WeatherForecast } from "./components/forecast/WeatherForecast";
 import { WeatherHighlight } from "./components/highlight/WeatherHighlight";
@@ -19,56 +19,64 @@ import {
   cityJson,
 } from "data/apps/weather-app/json";
 import { useComponentVisible } from "hooks/useComponentVisible";
+import axios from "axios";
 
 export const WeatherApp = () => {
   const [details, setDetails] = useState<any>(detailsSampleJson);
+  const [cities, setCities] = useState<any>(testCitiesJson);
+  const [cityDetail, setCityDetail] = useState<any>(cityJson);
   const [loading, setLoading] = useState<Boolean>(true);
   const [degree, setDegree] = useState<string>("C");
   const [inputChange, setInputChange] = useState<any>("");
   const [inputDelay, setInputDelay] = useState<string>("");
   const [displayInput, setDisplayInput] = useState<string>("");
   const [suggestionBox, setSuggestionBox] = useState<any>("");
-  const didMountRef = useRef<any>(false);
   const toast = useToast();
   const { sgRef, setIsComponentVisible, isComponentVisible } =
-    useComponentVisible(true);
-
-  console.log(sgRef);
-  console.log(isComponentVisible);
+    useComponentVisible(false);
 
   const handleDegree = (val: number) =>
     degree === "C" ? kelvinToC(val) : degree === "F" ? kelvinToF(val) : "error";
 
-  const handleTypedSearch = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter") {
-      const inputVal = trimAndCapitalize(e?.currentTarget?.value);
-
-      // Checking if the entered city exists or not
-      const filteredArr: any = testCitiesJson
-        .slice(0, 1)
-        .map((item) => item)[0];
-
-      filteredArr.name === inputVal
-        ? console.log("success")
-        : console.log("Error");
-    }
-  };
+  console.log("cities", cities);
 
   const handleInputDelay = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    setIsComponentVisible(true);
     setInputDelay(e?.currentTarget?.value);
     if (e.key === "Enter") {
       const inputVal = trimAndCapitalize(e?.currentTarget?.value);
 
       // Checking if the entered city exists or not
-      const filteredArr: any = testCitiesJson
-        .slice(0, 1)
-        .map((item) => item)[0];
+      const filteredArr: any = cities.slice(0, 1).map((item: any) => item)[0];
+
+      console.log("filteredArr.name", filteredArr.name);
 
       if (filteredArr.name === inputVal) {
         setInputDelay(inputVal);
         setDisplayInput(inputVal);
+        setLoading(true);
+        const getCoordinatesApi = async () => {
+          const response1 = await axios.get(
+            `http://api.openweathermap.org/geo/1.0/direct?q=${inputVal}&limit=1&appid=${process.env.REACT_APP_OPEN_WEATHER_API_KEY}`
+          );
+          const coordinates = response1.data,
+            lat = coordinates[0].lat,
+            lon = coordinates[0].lon;
 
-        toast(VALID_CITY);
+          const response2 = await axios.get(
+            `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${process.env.REACT_APP_OPEN_WEATHER_API_KEY}`
+          );
+
+          const response3 = await axios.get(
+            `https://api-bdc.net/data/reverse-geocode?latitude=${lat}&longitude=${lon}&localityLanguage=en&key=${process.env.REACT_APP_BIGDATA_API_KEY}`
+          );
+          setDetails(response2.data);
+          setCityDetail(response3.data);
+          setLoading(false);
+          setIsComponentVisible(false);
+          toast(VALID_CITY);
+        };
+        getCoordinatesApi();
       } else {
         toast(INVALID_CITY);
       }
@@ -91,71 +99,62 @@ export const WeatherApp = () => {
     const target = e?.currentTarget?.innerHTML;
     setInputDelay(target);
     setDisplayInput(target);
+    const getCitiesData = () => {
+      axios
+        .get(
+          `http://api.openweathermap.org/geo/1.0/direct?q=${target}&limit=5&appid=${process.env.REACT_APP_OPEN_WEATHER_API_KEY}`
+        )
+        .then((response) => setCities(response.data))
+        .catch((err) => console.log(err));
+    };
+    getCitiesData();
+    setLoading(false);
   };
 
   useEffect(() => {
     const timeoutId: any = setTimeout(() => handleInputSearch(inputDelay), 500);
+    setLoading(false);
+
     return () => clearTimeout(timeoutId);
-  }, [inputDelay]);
+  }, [inputDelay, displayInput]);
 
-  //     const OPEN_WEATHER_API_KEY = "b16e8052123fdc3a0619203be72674d8",
-  //       getCordURL = `http://api.openweathermap.org/geo/1.0/direct?q=${CITY_NAME}&limit=1&appid=${OPEN_WEATHER_API_KEY}`;
+  console.log("details", details);
 
-  //     const loadWeather = async () => {
-  //       setLoading(false);
-  //       const response1 = await axios.get(getCordURL),
-  //         coordinates = response1.data,
-  //         lat = coordinates[0].lat,
-  //         lon = coordinates[0].lon;
-
-  //       const getDetailsURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${OPEN_WEATHER_API_KEY}`,
-  //         response2 = await axios.get(getDetailsURL);
-  //       setWeatherDetails(response2.data);
-  //       setLoading(false);
-  //     };
-
-  //     loadWeather();
-
-  // console.log(weatherJson);
-
-  const lat = details?.lat,
-    lon = details?.lon,
-    temperature = handleDegree(details?.current?.temp),
-    current = details?.current,
-    daily = details?.daily,
-    timezone = details?.timezone,
+  const temp = handleDegree(details?.current?.temp),
     datetime = unixToTimeStamp(details?.current?.dt),
-    time = unixToTimeStamp(details?.current?.dt)?.time,
+    timezone = details?.timezone,
+    currentDay = details?.current,
+    dailyDay = details?.daily,
     currentIcon = findWeatherIcon(details?.current?.weather[0]?.icon)[0],
     dailyIcon = findWeatherIcon(details?.daily[0]?.weather[0]?.icon)[0],
-    hourlyIcon = findWeatherIcon(details?.hourly.at(-1)?.weather[0]?.icon)[0],
-    accuratePlace = `${cityJson?.locality}, ${cityJson?.localityInfo?.administrative[3]?.name}, ${cityJson?.countryName}`;
+    hourlyIcon = findWeatherIcon(details?.hourly[6]?.weather[0]?.icon)[0],
+    accuratePlace = `${cityDetail?.locality}, ${cityDetail?.localityInfo?.administrative[3]?.name}, ${cityDetail?.countryName}`;
 
   const weatherCurrent = {
-      degree,
       inputDelay,
       inputChange,
       displayInput,
       setInputChange,
-      handleTypedSearch,
       handleInputDelay,
       suggestionBox,
       handleSuggestion,
       sgRef,
       isComponentVisible,
       setIsComponentVisible,
-      temperature,
+    },
+    currentProps = {
+      temp,
+      degree,
       datetime,
-      time,
       currentIcon,
       dailyIcon,
       hourlyIcon,
       accuratePlace,
     },
-    weatherForecast = { daily, degree, setDegree, handleDegree },
-    weatherHighlight = {
-      ...current,
-      ...daily[0],
+    forecastProps = { dailyDay, degree, setDegree, handleDegree },
+    highlightProps = {
+      currentDay,
+      dailyDay,
       degree,
       handleDegree,
       timezone,
@@ -163,7 +162,7 @@ export const WeatherApp = () => {
 
   return (
     <>
-      {!loading ? (
+      {loading ? (
         <CustomSpinner />
       ) : (
         <Grid
@@ -178,9 +177,12 @@ export const WeatherApp = () => {
           }}
           gridTemplateColumns={{ xs: "100%", md: "300px calc(100% - 300px)" }}
         >
-          <WeatherCurrent {...weatherCurrent} />
-          <WeatherForecast {...weatherForecast} />
-          <WeatherHighlight {...weatherHighlight} />
+          <WeatherCurrent
+            weatherCurrent={weatherCurrent}
+            currentProps={currentProps}
+          />
+          <WeatherForecast {...forecastProps} />
+          <WeatherHighlight {...highlightProps} />
         </Grid>
       )}
     </>

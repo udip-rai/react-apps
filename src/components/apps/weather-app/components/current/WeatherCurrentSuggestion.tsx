@@ -2,10 +2,6 @@ import { Box, Text } from "@chakra-ui/react";
 
 export const WeatherCurrentSuggestion = (props: any) => {
   const { suggestionBox, sgRef, isComponentVisible, handleSuggestion } = props;
-  // const suggestionRef = useRef<any>(null);
-
-  console.log("sgRef", sgRef);
-  console.log("isComponentVisible", isComponentVisible);
 
   return (
     isComponentVisible && (

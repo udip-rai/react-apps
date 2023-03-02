@@ -5,14 +5,8 @@ import { WeatherCurrentSituation } from "./WeatherCurrentSituation";
 import { WeatherCurrentDateTemp } from "./WeatherCurrentDateTemp";
 
 export const WeatherCurrentCondition = (props: WeatherCurrentProps) => {
-  const {
-    degree,
-    temperature,
-    datetime,
-    dailyIcon,
-    hourlyIcon,
-    accuratePlace,
-  } = props;
+  const { degree, temp, datetime, dailyIcon, hourlyIcon, accuratePlace } =
+    props;
 
   const locationMini = {
     place: accuratePlace,
@@ -21,7 +15,7 @@ export const WeatherCurrentCondition = (props: WeatherCurrentProps) => {
 
   const weatherCurrentDetails = {
     degree,
-    temperature,
+    temp,
     datetime,
   };
 

@@ -16,7 +16,7 @@ export const WeatherHighlightSlider = (props: WeatherHighlightSliderProps) => {
     <Slider
       aria-label="Weather Slider"
       orientation="vertical"
-      defaultValue={default1}
+      value={default1}
       min={min}
       max={max}
       minH={32}

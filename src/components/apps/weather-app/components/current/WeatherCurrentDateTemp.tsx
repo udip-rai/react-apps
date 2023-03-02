@@ -5,16 +5,16 @@ import { WeatherCurrentDateTempProps } from "schemas/apps/WeatherAppSchema";
 
 export const WeatherCurrentDateTemp = (props: WeatherCurrentDateTempProps) => {
   const { myColors } = useContext(CustomColorsContext),
-    { degree, temperature, datetime } = props,
+    { degree, temp, datetime } = props,
     cDay = datetime?.day,
     cFulldate = datetime?.fulldate;
 
   return (
     <Box>
       <Text textStyle="xlText" lineHeight={6} color={myColors?.header}>
-        {temperature}
+        {temp}
         <Text as="span" textStyle="h6" color={myColors?.crimson_orange}>
-          &nbsp;&#176;{degree === "C" ? "C" : "F"}
+          &nbsp;&#176;{degree}
         </Text>
       </Text>
       <Text textStyle="smText" color={myColors?.span}>

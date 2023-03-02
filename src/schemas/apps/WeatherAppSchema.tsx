@@ -52,18 +52,10 @@ export type WeatherForecastCircleProps = {
 };
 
 export type WeatherHighlightProps = {
+  currentDay: any;
+  dailyDay: any;
   degree: string;
   handleDegree: any;
-  humidity: number;
-  sunrise: number;
-  sunset: number;
-  temp: any;
-  uvi: number;
-  visibility: number;
-  weather: any;
-  wind_speed: number;
-  moonrise: number;
-  moonset: number;
   timezone: string;
 };
 
@@ -79,7 +71,7 @@ export type WeatherCurrentProps = {
   degree: string;
   typedSearch: any;
   setTypedSearch: any;
-  temperature: string;
+  temp: string;
   datetime: any;
   currentIcon: any;
   dailyIcon: any;
@@ -90,21 +82,19 @@ export type WeatherCurrentProps = {
 export type WeatherDayStatsProps = {
   monthDay: string;
   day: string;
-  temperature: string;
+  temp: string;
   degree: string;
   img: string;
   myColors: any;
 };
 
 export type WeatherHighlightSunProps = {
-  sunriseTime: string;
-  sunsetTime: string;
-  moonriseTime: string;
-  moonsetTime: string;
+  sunMoonToday: any;
+  diff: any;
 };
 
 export type WeatherCurrentDateTempProps = {
-  temperature: string;
+  temp: string;
   datetime: any;
   degree: string;
 };
@@ -139,7 +129,7 @@ export type WeatherCurrentImgProps = {
 };
 
 export type WeatherForecastProps = {
-  daily: any;
+  dailyDay: any;
   degree: string;
   setDegree: any;
   handleDegree: any;

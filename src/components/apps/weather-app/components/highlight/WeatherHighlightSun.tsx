@@ -12,7 +12,7 @@ import { WeatherHighlightSingleSun } from "./WeatherHighlightSingleSun";
 
 export const WeatherHighlightSun = (props: WeatherHighlightSunProps) => {
   const { myColors } = useContext(CustomColorsContext),
-    { sunriseTime, sunsetTime, moonriseTime, moonsetTime } = props;
+    { sunMoonToday, diff } = props;
 
   return (
     <Flex className="today-highlight sunmoon">
@@ -26,25 +26,25 @@ export const WeatherHighlightSun = (props: WeatherHighlightSunProps) => {
       <Flex justifyContent="space-between">
         <WeatherHighlightSingleSun
           img={sunrise_img}
-          time={sunriseTime}
-          diff="5m 25s"
+          time={sunMoonToday.sunrise}
+          diff={diff.sunrise}
         />
         <WeatherHighlightSingleSun
           img={sunset_img}
-          time={sunsetTime}
-          diff="10m 47s"
+          time={sunMoonToday.sunset}
+          diff={diff.sunset}
         />
       </Flex>
       <Flex justifyContent="space-between">
         <WeatherHighlightSingleSun
           img={moon_rise_img}
-          time={moonriseTime}
-          diff="08m 29s"
+          time={sunMoonToday.moonrise}
+          diff={diff.moonrise}
         />
         <WeatherHighlightSingleSun
           img={moon_set_img}
-          time={moonsetTime}
-          diff="02m 18s"
+          time={sunMoonToday.moonset}
+          diff={diff.moonset}
         />
       </Flex>
     </Flex>

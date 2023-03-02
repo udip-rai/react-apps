@@ -9,7 +9,7 @@ import { WeatherForecastMenu } from "./WeatherForecastMenu";
 
 export const WeatherForecast = (props: WeatherForecastProps) => {
   const { myColors } = useContext(CustomColorsContext),
-    { daily, degree, handleDegree, setDegree } = props,
+    { dailyDay, degree, handleDegree, setDegree } = props,
     weatherCircle = { degree, setDegree, myColors };
 
   return (
@@ -30,16 +30,16 @@ export const WeatherForecast = (props: WeatherForecastProps) => {
       </Center>
 
       <Flex className="weather-forecast-images scrollbar-one">
-        {daily?.map((item: any, i: number) => {
+        {dailyDay?.map((item: any, i: number) => {
           let day = unixToTimeStamp(item?.dt)?.day,
             monthDay = unixToTimeStamp(item?.dt)?.monthDay,
-            temperature = handleDegree(item?.temp.day),
+            temp = handleDegree(item?.temp.day),
             img = findWeatherIcon(item?.weather[0]?.icon)[0]?.img;
 
           const daystats = {
             monthDay,
             day,
-            temperature,
+            temp,
             degree,
             img,
             myColors,

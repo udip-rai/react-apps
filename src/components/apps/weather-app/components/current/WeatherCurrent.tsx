@@ -4,12 +4,13 @@ import { WeatherCurrentImg } from "./WeatherCurrentImg";
 import { WeatherCurrentSearch } from "./WeatherCurrentSearch";
 
 export const WeatherCurrent = (props: any) => {
+  const { weatherCurrent, currentProps } = props;
   return (
     <GridItem className="weather-current" area="current">
       <Grid className="weather-current-grid">
-        <WeatherCurrentSearch {...props} />
-        <WeatherCurrentImg {...props.currentIcon} />
-        <WeatherCurrentCondition {...props} />
+        <WeatherCurrentSearch {...weatherCurrent} />
+        <WeatherCurrentImg {...currentProps.currentIcon} />
+        <WeatherCurrentCondition {...currentProps} />
       </Grid>
     </GridItem>
   );

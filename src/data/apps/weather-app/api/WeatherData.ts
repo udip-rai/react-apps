@@ -4,7 +4,7 @@
 
 //   const lat = details?.lat,
 //     lon = details?.lon,
-//     temperature = handleDegree(details?.current?.temp),
+//     temp = handleDegree(details?.current?.temp),
 //     current = details?.current,
 //     daily = details?.daily,
 //     timezone = details?.timezone,
@@ -28,7 +28,7 @@
 //       isComponentVisible,
 //       setIsComponentVisible,
 //       suggestionRef,
-//       temperature,
+//       temp,
 //       datetime,
 //       time,
 //       currentIcon,

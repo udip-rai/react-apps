@@ -3,9 +3,7 @@ import {
   InputGroup,
   InputLeftElement,
   GridItem,
-  useOutsideClick,
 } from "@chakra-ui/react";
-import { ChangeEvent } from "react";
 import { BiSearch } from "react-icons/bi";
 import { WeatherCurrentSuggestion } from "./WeatherCurrentSuggestion";
 

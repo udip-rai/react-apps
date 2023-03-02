@@ -40,7 +40,7 @@
   - A lot of API calls will result in API not working
   - The real API will replace the json making it dynamic later
 - Added to utils part which contain logical operations like-
-  - temperature in C or F, fulldate & time from UNIX timestamp
+  - temp in C or F, fulldate & time from UNIX timestamp
   - find weather conditon based on the values
   - find the weather image based on the weather conditon etc.
 
@@ -53,3 +53,13 @@
 - Actually Im not gonna use debounce. Gonna apply the good old hard-codin' everything
 - I also added a hook that makes component visible on click & closes when clicked anywhere else (except that component).
 - Added some toast messages for status messages
+
+### git commit -m "05 - Worked with REST API and got required results"
+
+- Modified json file from API such that main components get the required props
+- Used 3 different APIs,
+  - 2 APIs from OpenWeather
+    - One to fetch city names after the user hits Enter so that I dont have to call the other apis if this one fails (THIS API needs the API_KEY & city name)
+    - Another one to fetch details of the weather of the entered city/place name (This API needs API_KEY & city name)
+  - 1 BigDataCloud from BigDataCloud
+    - In order to get the specific details of the city like accurate location of the place (This API needs API_KEY & Latitude/Longitude both)

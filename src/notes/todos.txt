@@ -15,7 +15,7 @@ const weatherCurrent = {
       isComponentVisible,
       setIsComponentVisible,
       suggestionRef,
-      temperature,
+      temp,
       datetime,
       time,
       currentIcon,

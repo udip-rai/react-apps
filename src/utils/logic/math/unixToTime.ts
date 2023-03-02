@@ -11,14 +11,22 @@ export const unixToTimeStamp = (unix_timestamp: number) => {
       month: "short",
       day: "2-digit",
     }),
+    minuteSec = date.toLocaleString("default", {
+      minute: "numeric",
+      second: "numeric",
+    }),
     dayNumber = date.getDay(),
     hours = date.getHours(),
-    minutes = "0" + date.getMinutes(),
-    seconds = "0" + date.getSeconds(),
-    newHours = hours < 10 ? `0${hours}` : hours,
-    newMinutes = parseInt(minutes) < 10 ? `0${minutes}` : minutes,
-    newSeconds = parseInt(seconds) < 10 ? `0${seconds}` : seconds,
-    time = `${newHours}:${newMinutes.substring(1)}`,
+    minutes = date.getMinutes(),
+    seconds = date.getSeconds(),
+    minutes1 = "0" + date.getMinutes(),
+    seconds1 = "0" + date.getSeconds(),
+    newHours1 = hours > 12 ? `${hours - 12}` : hours,
+    newHours = newHours1 < 10 ? `0${newHours1}` : newHours1,
+    newMinutes = parseInt(minutes1) < 10 ? `0${minutes1}` : minutes1,
+    newSeconds = parseInt(seconds1) < 10 ? `0${seconds1}` : seconds1,
+    time1 = `${newHours}:${newMinutes.substring(1)}`,
+    time = hours > 12 ? `${time1} PM` : `${time1} AM`,
     fulltime = `${newHours}:${newMinutes.substring(1)}:${newSeconds.substring(
       1
     )}`;
@@ -49,5 +57,15 @@ export const unixToTimeStamp = (unix_timestamp: number) => {
       break;
   }
 
-  return { time, fulltime, day, fulldate, monthDay };
+  return {
+    time,
+    fulltime,
+    day,
+    fulldate,
+    monthDay,
+    hours,
+    minutes,
+    seconds,
+    minuteSec,
+  };
 };

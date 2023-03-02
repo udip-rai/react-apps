@@ -54,7 +54,7 @@ const compareHumidity = (val: number) => {
     : val > 30 && val <= 50
     ? ["Moderate", "yellow.600"]
     : val > 50 && val <= 55
-    ? ["High", "green.400"]
+    ? ["Best Condition", "green.400"]
     : val > 55 && val <= 65
     ? ["High", "orange.400"]
     : ["Very High", "red.500"];
