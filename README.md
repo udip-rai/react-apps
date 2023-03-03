@@ -7,6 +7,7 @@
 - Modify the toast error msg into something more meaningful as -
   - Error 400, Type Error etc are hard to catch for normal people
 - Create a hook that that calls axios requests in 1 call
+- Update all the types that were marked as any (bad practice)
 
 ## All my commits
 
@@ -14,16 +15,12 @@
 
 - Initialized project with Create React App
 
-## Commit 01
-
 ### git commit -m "01 - Created a project env with good folder structure"
 
 - I installed a Typescript React project with yarn.
 - Created a neat folder structure and installed npm dependencies.
 - Provided a route endpoint where every page/component can access.
 - Made a CustomTheme to make changes to the default theme.
-
-## Commit 02
 
 ### git commit -m "02 - Managed Layouts, Pages, Context, Routes & added images"
 
@@ -36,8 +33,6 @@
 - Downloaded tons of free pics from & SVG images:
   - [FlatIcon](https://www.flaticon.com/)
   - [FreePik](https://www.freepik.com/)
-
-## Commit 03
 
 ### git commit -m "03 - Major changes in responsive design with components, hooks & contexts"
 
@@ -87,3 +82,9 @@
 - the input text focuses out after you type on each key pressed
 - this is due to the input component being rendered again with the new dynamic key
 - Added slight stylings for user-feel and exp. (tooltip and error messages)
+
+### git commit -m "07 - Fixed warning msg. shown while building in netlify"
+
+- Could not deploy to netlify as the build failed
+  - I had a unused variable declaration in code which I fixed just now
+- Lets hope it deploys for real now fr fr
