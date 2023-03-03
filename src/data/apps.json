@@ -10,13 +10,13 @@
       "title": "Pagination App",
       "img": "police/hello.png",
       "href": "pagination-app",
-      "details": ["demo", "demo", "demo"]
+      "details": ["demo2", "demo3", "demo4"]
     },
     {
       "title": "Chatting App",
       "img": "police/yes.png",
       "href": "chatting-app",
-      "details": ["demo", "demo", "demo"]
+      "details": ["demo5", "demo6", "demo7"]
     }
   ]
 }

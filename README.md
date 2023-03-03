@@ -88,3 +88,14 @@
 - Could not deploy to netlify as the build failed
   - I had a unused variable declaration in code which I fixed just now
 - Lets hope it deploys for real now fr fr
+
+### git commit -m "08 - Managed UI/UX and cleared bugs in axios & slider"
+
+- Fixed slider bug by making sure the values are not returned as undefined
+- Location name was long, I made it responsive by splicing to fine-tune UI
+- Customized the Loading Spinner into something better
+- Web API Error - This request has been blocked; the content must be served over HTTPS
+  - <ins>In order to solve it: Added these to meta tag inside index.html</ins>
+    - http-equiv="Content-Security-Policy"
+    - content="upgrade-insecure-requests"
+- Added a popover on footer

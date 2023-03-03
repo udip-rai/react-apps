@@ -49,9 +49,12 @@ export const weatherCurrentCss = (props: StyleFunctionProps) => ({
       maxWidth: "400px",
       w: [110, 110, 180, 250],
       order: 0,
+      borderBottomRightRadius: "2rem",
+      borderBottomLeftRadius: "2rem",
       ".chakra-input__left-element ": {
         h: ["30px", "30px", "30px", "40px"],
         fontSize: ["20px", "20px", "20px", "25px"],
+        left: -1,
       },
       // flexDirection: "column",
       ".weather-current-suggestion": {
@@ -65,7 +68,8 @@ export const weatherCurrentCss = (props: StyleFunctionProps) => ({
         top: ["30px", "30px", "30px", "40px"],
         overflowY: "scroll",
       },
-      ".chakra-input": {
+      "input.chakra-input": {
+        ps: "32px",
         h: ["30px", "30px", "30px", "40px"],
         bg: mode("gray.600", "gray.200")(props),
         "&::placeholder": {
@@ -79,12 +83,9 @@ export const weatherCurrentCss = (props: StyleFunctionProps) => ({
       div: {
         alignItems: "center",
         ".chakra-image": {
-          boxSize: ["90px", "90px", "90px", "120px", "140px"],
+          boxSize: ["80px", "80px", "90px", "120px", "140px"],
           objectFit: "contain",
         },
-        // ".chakra-text": {
-        //   textStyle: "span-bold",
-        // },
       },
     },
     ".weather-current-details": {

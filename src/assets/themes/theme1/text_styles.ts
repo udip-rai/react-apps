@@ -62,13 +62,13 @@ export const textStyles = {
     fontWeight: "semibold",
   },
   smText: {
-    fontSize: ["0.7rem", "0.75rem", "0.9rem", "0.9rem", "sm"],
+    fontSize: ["0.7rem", "0.7rem", "0.8rem", "0.9rem", "sm"],
     fontWeight: "semibold",
   },
   xsText: {
-    fontSize: ["0.6rem", "0.65rem", "0.8rem", "0.8rem", "sm"],
+    fontSize: ["0.6rem", "0.6rem", "0.7rem", "0.8rem", "sm"],
   },
   xxsText: {
-    fontSize: ["0.5rem", "0.55rem", "0.7rem", "0.7rem", "sm"],
+    fontSize: ["0.5rem", "0.5rem", "0.6rem", "0.7rem", "sm"],
   },
 };

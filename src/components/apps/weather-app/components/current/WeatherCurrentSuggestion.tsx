@@ -36,12 +36,12 @@ export const WeatherCurrentSuggestion = (props: any) => {
         ) : (
           <Flex flexDirection={{ xs: "column", md: "row" }} alignItems="center">
             <Image boxSize="80px" src={shocked_img} />
-            <Text fontWeight="bold" flex={1}>
+            <Text fontWeight="bold" flex={1} textAlign="center">
               <Badge as="span" variant="solid" bg="white" color="red">
-                No such city.
+                No such city
               </Badge>
               <br />
-              In database. You can still search tho.
+              You can still search.
             </Text>
           </Flex>
         )}

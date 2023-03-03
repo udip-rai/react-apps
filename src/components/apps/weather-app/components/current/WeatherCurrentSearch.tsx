@@ -13,8 +13,6 @@ import { allCitiesJson as citiesToFilterJson } from "data/apps/weather-app/json"
 import { trimAndCapitalize } from "utils/logic/trimAndCapitalize";
 import { TOAST_ERROR_MSG, VALID_CITY } from "utils/constants";
 
-export type OnKeyDownType = React.KeyboardEvent<HTMLInputElement>;
-
 export const WeatherCurrentSearch = (props: any) => {
   const {
     sgRef,

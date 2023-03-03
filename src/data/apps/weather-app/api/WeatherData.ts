@@ -25,7 +25,7 @@ export const getWeatherDetails = (
     currentIcon = findWeatherIcon(details?.current?.weather[0]?.icon)[0],
     dailyIcon = findWeatherIcon(details?.daily[0]?.weather[0]?.icon)[0],
     hourlyIcon = findWeatherIcon(details?.hourly[6]?.weather[0]?.icon)[0],
-    accuratePlace = `${cityDetail?.locality}, ${cityDetail?.localityInfo?.administrative[3]?.name}, ${cityDetail?.countryName}`;
+    accuratePlace = `${cityDetail?.locality}, ${cityDetail?.principalSubdivision}, ${cityDetail?.countryName}`;
 
   const currentProps = {
       temp,

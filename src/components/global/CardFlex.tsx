@@ -1,7 +1,7 @@
 import { Button, Center, Flex, Image, Text } from "@chakra-ui/react";
+import { InfoTooltip } from "components/animations";
 import { NavLink } from "react-router-dom";
 import { CardFlexProps } from "schemas/GlobalSchema";
-import { InfoTooltip } from "./InfoTooltip";
 
 export const CardFlex = (props: CardFlexProps) => {
   const { title, img, href, details } = props;

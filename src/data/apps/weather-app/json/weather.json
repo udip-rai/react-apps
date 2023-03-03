@@ -2,21 +2,21 @@
   {
     "title": "Wind Status",
     "unit": "km/h",
-    "slider": [{ "min": 1, "max": 70 }]
+    "slider": { "min": 1, "max": 70 }
   },
   {
     "title": "Humidity",
     "unit": "%",
-    "slider": [{ "min": 20, "max": 70 }]
+    "slider": { "min": 20, "max": 100 }
   },
   {
     "title": "Visibility",
     "unit": "km/h",
-    "slider": [{ "min": 40, "max": 68000 }]
+    "slider": { "min": 40, "max": 60000 }
   },
   {
     "title": "UV Radiation",
     "unit": "",
-    "slider": [{ "min": 0, "max": 10 }]
+    "slider": { "min": 0, "max": 10 }
   }
 ]

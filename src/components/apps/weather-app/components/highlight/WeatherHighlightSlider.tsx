@@ -9,6 +9,7 @@ import { WeatherHighlightSliderProps } from "schemas/apps/WeatherAppSchema";
 
 export const WeatherHighlightSlider = (props: WeatherHighlightSliderProps) => {
   const { min, max, default1, color } = props;
+
   const newColor = color.split(".")[0],
     lightColor = newColor + ".200",
     darkColor = newColor + ".100";
