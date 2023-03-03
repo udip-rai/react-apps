@@ -1,5 +1,15 @@
 # My personal + professional portfolio resume ?
 
+## Todos
+
+**Weather app**
+
+- Modify the toast error msg into something more meaningful as -
+  - Error 400, Type Error etc are hard to catch for normal people
+- Create a hook that that calls axios requests in 1 call
+
+## All my commits
+
 ## Commit 00
 
 - Initialized project with Create React App
@@ -63,3 +73,17 @@
     - Another one to fetch details of the weather of the entered city/place name (This API needs API_KEY & city name)
   - 1 BigDataCloud from BigDataCloud
     - In order to get the specific details of the city like accurate location of the place (This API needs API_KEY & Latitude/Longitude both)
+
+### git commit -m "06 - Refractored codes & End of Weather App"
+
+- Refractored codes on states since they were rendering way more than normal
+- Special thanks to Senny dai/dada for pointing it out that I dont need to put in all the states in 1 place/component
+- Perfected the debouncing concept with timer & setTimer
+  - this is so much fun, I dont have to rely on useEffect that much anymore now
+- Found out reasons of components to re-render:
+  - Outside useEffect, Consoling logs that require values/states
+  - Creating random keys from Math.random() for mapped elements
+- Extra tip: If you declared a dynamic key on input text,
+- the input text focuses out after you type on each key pressed
+- this is due to the input component being rendered again with the new dynamic key
+- Added slight stylings for user-feel and exp. (tooltip and error messages)

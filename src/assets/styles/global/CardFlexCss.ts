@@ -24,7 +24,7 @@ export const cardFlex = (props: StyleFunctionProps) => ({
     h: "185px",
     flexDirection: "column",
     img: {
-      boxSize: "100%",
+      boxSize: "170px",
       objectFit: "contain",
       "&:hover": {
         transform: "scale(1.09)",
@@ -33,7 +33,10 @@ export const cardFlex = (props: StyleFunctionProps) => ({
     },
   },
   ".card-btn": {
-    bg: mode("red.300", "bright_red")(props),
+    bg: mode("maya_blue", "bright_red")(props),
     fontSize: "sm",
+    "&:hover": {
+      bg: mode("steel_blue", "space_cherry")(props),
+    },
   },
 });

@@ -10,7 +10,7 @@ export const WeatherCurrentCondition = (props: WeatherCurrentProps) => {
 
   const locationMini = {
     place: accuratePlace,
-    txtStyle: "xsText",
+    txtStyle: "smText",
   };
 
   const weatherCurrentDetails = {

@@ -4,7 +4,7 @@ import { WeatherHighlightStatusProps } from "schemas/apps/WeatherAppSchema";
 export const WeatherHighlightStatus = (props: WeatherHighlightStatusProps) => {
   const { color, msg } = props;
   return (
-    <Box>
+    <Box textStyle="p" fontWeight="bold">
       Status:
       <Text as="span" color={color}>
         &nbsp;{msg}

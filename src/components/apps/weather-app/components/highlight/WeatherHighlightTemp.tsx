@@ -1,5 +1,6 @@
-import { Flex, Box, Text, Image } from "@chakra-ui/react";
+import { Flex, Box, Text, Image, Tooltip } from "@chakra-ui/react";
 import { temperature_img } from "assets/images/apps/weather-app";
+import { fever_img } from "assets/images/police";
 import { CustomColorsContext } from "context";
 import { useContext } from "react";
 import { WeatherHighlightTempProps } from "schemas/apps/WeatherAppSchema";
@@ -23,7 +24,16 @@ export const WeatherHighlightTemp = (props: WeatherHighlightTempProps) => {
         <WeatherHighlightMain {...props} {...myColors} />
 
         <Box className="temp-img">
-          <Image src={temperature_img} />
+          <Tooltip
+            bg={myColors?.common}
+            color={myColors?.common}
+            hasArrow
+            arrowSize={10}
+            placement="left"
+            label={<Image boxSize="90px" src={fever_img} />}
+          >
+            <Image src={temperature_img} />
+          </Tooltip>
         </Box>
       </Flex>
 

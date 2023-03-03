@@ -14,7 +14,7 @@ export const NavLogo = () => {
         fontSize="lg"
         fontWeight="900"
         position="absolute"
-        right="15px"
+        right="12px"
         lineHeight="18px"
       >
         Udip

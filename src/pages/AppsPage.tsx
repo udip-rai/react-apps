@@ -5,23 +5,14 @@ import appsJson from "data/apps.json";
 export const AppsPage = () => {
   return (
     <Grid className="apps-page grid-cards">
-      {appsJson[0]?.map((item) => {
+      {appsJson[0]?.map((item, i: number) => {
         return (
           <CardFlex
-            key={Date.now() + item.title}
+            key={item.title + item.img}
             title={item.title}
             img={item.img}
             href={item.href}
-          />
-        );
-      })}
-      {appsJson[0]?.map((item) => {
-        return (
-          <CardFlex
-            key={Date.now() + item.title}
-            title={item.title}
-            img={item.img}
-            href={item.href}
+            details={item.details}
           />
         );
       })}

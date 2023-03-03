@@ -12,7 +12,7 @@
   {
     "title": "Visibility",
     "unit": "km/h",
-    "slider": [{ "min": 40, "max": 40000 }]
+    "slider": [{ "min": 40, "max": 68000 }]
   },
   {
     "title": "UV Radiation",

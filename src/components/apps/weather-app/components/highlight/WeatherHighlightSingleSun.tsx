@@ -12,7 +12,7 @@ export const WeatherHighlightSingleSun = (
   return (
     <Stack direction="column" spacing={0} align="center">
       <Image boxSize="75%" objectFit="contain" src={img} />
-      <Text textStyle="span" lineHeight={0} fontWeight="bold">
+      <Text textStyle="xsSpan" lineHeight={0} fontWeight="bold">
         {time}
         <Text
           as="span"

@@ -3,17 +3,20 @@
     {
       "title": "Weather App",
       "img": "apps/weather-app/broken_clouds.svg",
-      "href": "weather-app"
+      "href": "weather-app",
+      "details": ["Chakra UI", "Custom Hooks + Context", "REST APIs (GET)"]
     },
     {
       "title": "Pagination App",
-      "img": "apps/weather-app/broken_clouds.svg",
-      "href": "pagination-app"
+      "img": "police/hello.png",
+      "href": "pagination-app",
+      "details": ["demo", "demo", "demo"]
     },
     {
       "title": "Chatting App",
-      "img": "apps/weather-app/broken_clouds.svg",
-      "href": "chatting-app"
+      "img": "police/yes.png",
+      "href": "chatting-app",
+      "details": ["demo", "demo", "demo"]
     }
   ]
 }

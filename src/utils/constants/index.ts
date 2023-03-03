@@ -1,5 +1,8 @@
 // Display stylings
 export const showFromMd = ["none", "none", "block"];
+export const hideFromMd = ["block", "block", "none"];
+export const showFromLg = ["none", "none", "none", "block"];
+export const hideFromLg = ["block", "block", "block", "none"];
 export const iconSize = ["18px", "18px", "18px", "25px"];
 // export const WeatherAppHeight = [
 //   "auto",
@@ -9,6 +12,17 @@ export const iconSize = ["18px", "18px", "18px", "25px"];
 // ];
 
 // Toast Messages
+export const TOAST_ERROR_MSG: any = (err: any) => {
+  return {
+    title: err.toString(),
+    description: "Please input a proper city name.",
+    status: "error",
+    duration: 5000,
+    isClosable: true,
+    position: "top",
+  };
+};
+
 export const VALID_CITY: any = {
   title: "Success! Valid place.",
   description: "Your details have been presented as is.",

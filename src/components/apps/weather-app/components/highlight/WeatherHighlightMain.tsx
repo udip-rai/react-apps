@@ -8,13 +8,13 @@ export const WeatherHighlightMain = (props: WeatherHighlightMainProps) => {
       {Object.values(minMax)?.map((item: any, i: number) => {
         return (
           <Flex
-            key={Date.now() + item}
+            key={item[i] + item[i] + i.toString()}
             gap={0}
             flexDir="column"
             lineHeight={10}
           >
             <Box>
-              <Text as="span" textStyle="h2">
+              <Text as="span" textStyle="h3">
                 {item}
               </Text>
               <Text as="span" color={crimson_green}>
@@ -23,7 +23,7 @@ export const WeatherHighlightMain = (props: WeatherHighlightMainProps) => {
             </Box>
             <Text
               as="span"
-              textStyle="span"
+              textStyle="xsSpan"
               fontWeight="bold"
               lineHeight={0}
               color={span}

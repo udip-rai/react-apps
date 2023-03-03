@@ -45,10 +45,10 @@ export const WeatherHighlight = (props: WeatherHighlightProps) => {
       >
         <WeatherHighlightSun {...highlightSun} />
         <WeatherHighlightTemp {...highlightTemp} />
-        {weatherJson.map((item: any, i: number) => {
+        {weatherJson?.map((item: any, i: number) => {
           return (
             <WeatherHightlightSingle
-              key={Date.now() + Math.random()}
+              key={item.unit + item.title + i}
               title={item.title}
               unit={item.unit}
               slider={item.slider}

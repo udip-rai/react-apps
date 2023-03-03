@@ -1,33 +1,4 @@
-- Same color highlights for button in CardFlex (for hover as well)
-- 
-
-
-const weatherCurrent = {
-      degree,
-      inputDelay,
-      inputChange,
-      displayInput,
-      setInputChange,
-      handleTypedSearch,
-      handleInputDelay,
-      suggestionBox,
-      handleSuggestion,
-      isComponentVisible,
-      setIsComponentVisible,
-      suggestionRef,
-      temp,
-      datetime,
-      time,
-      currentIcon,
-      dailyIcon,
-      hourlyIcon,
-      accuratePlace,
-    },
-    weatherForecast = { daily, degree, setDegree, handleDegree },
-    weatherHighlight = {
-      ...current,
-      ...daily[0],
-      degree,
-      handleDegree,
-      timezone,
-    };
+Todos 
+Weather app
+- Modify the toast error msg into something more meaningful as Error 400, Type Error etc are hard to catch for non-programmers/field
+- Create a hook that that calls axios requests in 1 call

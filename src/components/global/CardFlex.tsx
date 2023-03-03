@@ -1,18 +1,21 @@
 import { Button, Center, Flex, Image, Text } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
 import { CardFlexProps } from "schemas/GlobalSchema";
+import { InfoTooltip } from "./InfoTooltip";
 
 export const CardFlex = (props: CardFlexProps) => {
-  const { title, img, href } = props;
+  const { title, img, href, details } = props;
 
   return (
     <Flex className="card-flex">
       <Center>
-        <Image
-          className="remove-blur"
-          src={require(`assets/images/${img}`)}
-          alt={title}
-        />
+        <InfoTooltip details={details}>
+          <Image
+            className="remove-blur"
+            src={require(`assets/images/${img}`)}
+            alt={title}
+          />
+        </InfoTooltip>
       </Center>
       <NavLink to={href}>
         <Button className="card-btn">

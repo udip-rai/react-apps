@@ -56,9 +56,12 @@ export const weatherCurrentCss = (props: StyleFunctionProps) => ({
       // flexDirection: "column",
       ".weather-current-suggestion": {
         w: [110, 110, 180, 250],
-        h: 300,
+        h: "fit-content",
+        minH: 0,
+        p: 2,
+        maxH: 300,
         position: "absolute",
-        bg: "violet",
+        bg: mode("#8952e0f0", "#b795eccc")(props),
         top: ["30px", "30px", "30px", "40px"],
         overflowY: "scroll",
       },
@@ -93,7 +96,7 @@ export const weatherCurrentCss = (props: StyleFunctionProps) => ({
       ".weather-current-state": {
         flexDirection: ["row", "row", "row", "column"],
         justifyContent: "center",
-        gap: [2, 2, 5, 2],
+        gap: [0, 2, 5, 2],
       },
 
       ".weather-current-location": {

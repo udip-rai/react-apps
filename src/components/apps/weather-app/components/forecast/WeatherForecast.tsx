@@ -45,10 +45,7 @@ export const WeatherForecast = (props: WeatherForecastProps) => {
             myColors,
           };
           return (
-            <WeatherForecastStats
-              key={Date.now() + Math.random()}
-              {...daystats}
-            />
+            <WeatherForecastStats key={item?.dt + item?.temp} {...daystats} />
           );
         })}
       </Flex>

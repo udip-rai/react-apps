@@ -13,9 +13,16 @@ export const CustomColorsProvider = (props: CustomColorsProviderProps) => {
     header = useColorModeValue("good_blue", "cyber_yellow"),
     paragraph = useColorModeValue("gray.700", "new_white"),
     span = useColorModeValue("gray.500", "purple.200"),
-    light = useColorModeValue("gray.50", "gray.800"),
-    dark = useColorModeValue("gray.800", "gray.50"),
-    crimson_orange = useColorModeValue("space_cherry", "pumpkin");
+    light = useColorModeValue("whiteAlpha.700", "blackAlpha.300"),
+    dark = useColorModeValue("blackAlpha.300", "whiteAlpha.700"),
+    lighter = useColorModeValue("gray.50", "gray.800"),
+    darker = useColorModeValue("gray.800", "gray.50"),
+    common = useColorModeValue("#8952e0f0", "#b795eccc"),
+    crimson_orange = useColorModeValue("space_cherry", "pumpkin"),
+    red = useColorModeValue("red.400", "red.100"),
+    orange = useColorModeValue("orange.400", "orange.100"),
+    yellow = useColorModeValue("yellow.600", "yellow.100"),
+    green = useColorModeValue("green.400", "green.100");
 
   useEffect(() => {
     setMyColors({
@@ -24,10 +31,32 @@ export const CustomColorsProvider = (props: CustomColorsProviderProps) => {
       paragraph,
       span,
       light,
+      lighter,
       dark,
+      darker,
+      common,
       crimson_orange,
+      red,
+      orange,
+      yellow,
+      green,
     });
-  }, [title, header, paragraph, span, light, dark, crimson_orange]);
+  }, [
+    title,
+    header,
+    paragraph,
+    span,
+    light,
+    lighter,
+    dark,
+    darker,
+    common,
+    crimson_orange,
+    red,
+    orange,
+    yellow,
+    green,
+  ]);
 
   return (
     <CustomColorsContext.Provider value={{ myColors }}>

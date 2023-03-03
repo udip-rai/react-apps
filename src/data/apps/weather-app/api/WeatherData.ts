@@ -1,53 +1,49 @@
-// import React from 'react'
+import {
+  kelvinToC,
+  kelvinToF,
+  unixToTimeStamp,
+  findWeatherIcon,
+} from "utils/logic";
 
-// export const WeatherData = () => {
+export const getWeatherDetails = (
+  details: any,
+  degree: string,
+  setDegree: any,
+  cityDetail: any
+) => {
+  const handleDegree = (val: number) =>
+      degree === "C"
+        ? kelvinToC(val)
+        : degree === "F"
+        ? kelvinToF(val)
+        : "error",
+    temp = handleDegree(details?.current?.temp),
+    datetime = unixToTimeStamp(details?.current?.dt),
+    timezone = details?.timezone,
+    currentDay = details?.current,
+    dailyDay = details?.daily,
+    currentIcon = findWeatherIcon(details?.current?.weather[0]?.icon)[0],
+    dailyIcon = findWeatherIcon(details?.daily[0]?.weather[0]?.icon)[0],
+    hourlyIcon = findWeatherIcon(details?.hourly[6]?.weather[0]?.icon)[0],
+    accuratePlace = `${cityDetail?.locality}, ${cityDetail?.localityInfo?.administrative[3]?.name}, ${cityDetail?.countryName}`;
 
-//   const lat = details?.lat,
-//     lon = details?.lon,
-//     temp = handleDegree(details?.current?.temp),
-//     current = details?.current,
-//     daily = details?.daily,
-//     timezone = details?.timezone,
-//     datetime = unixToTimeStamp(details?.current?.dt),
-//     time = unixToTimeStamp(details?.current?.dt)?.time,
-//     currentIcon = findWeatherIcon(details?.current?.weather[0]?.icon)[0],
-//     dailyIcon = findWeatherIcon(details?.daily[0]?.weather[0]?.icon)[0],
-//     hourlyIcon = findWeatherIcon(details?.hourly.at(-1)?.weather[0]?.icon)[0],
-//     accuratePlace = `${cityDetails?.locality}, ${cityDetails?.localityInfo?.administrative[3]?.name}, ${cityDetails?.countryName}`;
+  const currentProps = {
+      temp,
+      degree,
+      datetime,
+      currentIcon,
+      dailyIcon,
+      hourlyIcon,
+      accuratePlace,
+    },
+    forecastProps = { dailyDay, degree, setDegree, handleDegree },
+    highlightProps = {
+      currentDay,
+      dailyDay,
+      degree,
+      handleDegree,
+      timezone,
+    };
 
-//   const weatherCurrent = {
-//       degree,
-//       inputDelay,
-//       inputChange,
-//       displayInput,
-//       setInputChange,
-//       handleTypedSearch,
-//       handleInputDelay,
-//       suggestionBox,
-//       handleSuggestion,
-//       isComponentVisible,
-//       setIsComponentVisible,
-//       suggestionRef,
-//       temp,
-//       datetime,
-//       time,
-//       currentIcon,
-//       dailyIcon,
-//       hourlyIcon,
-//       accuratePlace,
-//     },
-//     weatherForecast = { daily, degree, setDegree, handleDegree },
-//     weatherHighlight = {
-//       ...current,
-//       ...daily[0],
-//       degree,
-//       handleDegree,
-//       timezone,
-//     };
-
-//   return (
-//     <div>WeatherData</div>
-//   )
-// }
-
-export {};
+  return { currentProps, forecastProps, highlightProps };
+};

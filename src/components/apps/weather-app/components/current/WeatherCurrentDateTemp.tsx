@@ -18,7 +18,9 @@ export const WeatherCurrentDateTemp = (props: WeatherCurrentDateTempProps) => {
         </Text>
       </Text>
       <Text textStyle="smText" color={myColors?.span}>
-        {cDay}
+        <Text as="span" textStyle="xsText">
+          {cDay}
+        </Text>
         <Text as="span" color={myColors?.header}>
           &nbsp;{cFulldate}
         </Text>
