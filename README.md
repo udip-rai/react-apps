@@ -105,3 +105,9 @@
 - Changed text sizes in mobile views & logo design
 - Added a ton of images (exactly 9)
 - Tooltip now works on all devices including mobile events (mouseEnter, onMouseLeave, click)
+
+### git commit -m "10 - Basic design for Chatting App"
+
+- Created a folder structure for chatting app
+- Added required files (so far)
+- Minimized some css changes from previous project

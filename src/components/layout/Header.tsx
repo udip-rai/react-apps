@@ -1,4 +1,4 @@
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex, Hide, Text } from "@chakra-ui/react";
 import { useLocation } from "react-router-dom";
 import { readableString } from "utils/logic";
 import { ColorModeSwitcher } from "components/buttons/ColorModeSwitcher";
@@ -12,7 +12,9 @@ export const Header = () => {
   return (
     <Flex className="header">
       <NavLogo />
-      <Text textStyle="title">{newTitle}</Text>
+      <Hide below="350px">
+        <Text textStyle="title">{newTitle}</Text>
+      </Hide>
       <ColorModeSwitcher />
     </Flex>
   );

@@ -11,6 +11,9 @@ export const iconSize = ["18px", "18px", "18px", "25px"];
 //   "calc(100vh - 70px - 70px)",
 // ];
 
+// Z Index
+export const Z_INDEX = [0, 1, 10];
+
 // Toast Messages
 export const TOAST_ERROR_MSG: any = (err: any) => {
   return {
