@@ -16,7 +16,7 @@ export const WeatherHighlightSingleSun = (
         {time}
         <Text
           as="span"
-          textStyle="xsSpan"
+          textStyle="xxsSpan"
           fontWeight="bold"
           color={myColors?.span}
           lineHeight={0}

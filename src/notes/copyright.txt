@@ -16,6 +16,8 @@ https://www.flaticon.com/free-sticker/television_6183648
 https://www.flaticon.com/free-sticker/retro_5928440
 https://www.flaticon.com/free-sticker/office_6119572
 https://www.flaticon.com/free-sticker/responsive-website_6858076
+https://www.flaticon.com/free-sticker/online-learning_4681587
+https://www.flaticon.com/free-sticker/studying_4524463
 
 
 [================ /images/errors ================]
@@ -36,6 +38,15 @@ https://www.flaticon.com/free-sticker/update_9394544
 https://www.flaticon.com/free-sticker/ecommerce_4481144
 https://www.flaticon.com/free-sticker/hiring_5272933
 https://www.flaticon.com/free-sticker/setting_9394540
+https://www.flaticon.com/free-sticker/book_6426938
+https://www.flaticon.com/free-sticker/reading_9440521
+https://www.flaticon.com/free-sticker/read_7546338
+https://www.flaticon.com/free-sticker/read_4891262
+https://www.flaticon.com/free-sticker/reading_9747395
+https://www.flaticon.com/free-sticker/reading_9747350
+https://www.flaticon.com/free-sticker/read_7596108
+https://www.flaticon.com/free-sticker/read_7182812
+https://www.flaticon.com/free-sticker/read_7182833
 
 
 [================ /images/weather ================]

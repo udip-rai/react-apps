@@ -1,8 +1,11 @@
 import { Flex, Image, Text, Center } from "@chakra-ui/react";
 import { laptop_img } from "assets/images/home";
+import { CustomColorsContext } from "context";
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 
 export const NavLogo = () => {
+  const { myColors } = useContext(CustomColorsContext);
   return (
     <Flex pos="relative" w="100px">
       <NavLink to="/">
@@ -14,13 +17,13 @@ export const NavLogo = () => {
         fontSize="lg"
         fontWeight="900"
         position="absolute"
-        right="12px"
+        left="42px"
+        top="10px"
         lineHeight="18px"
       >
-        Udip
-        <br />
-        <Text as="span" color="red">
-          Rai
+        UDIP
+        <Text as="span" color={myColors?.sky_red}>
+          RAI
         </Text>
       </Text>
     </Flex>

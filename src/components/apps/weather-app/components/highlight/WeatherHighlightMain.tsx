@@ -23,7 +23,7 @@ export const WeatherHighlightMain = (props: WeatherHighlightMainProps) => {
             </Box>
             <Text
               as="span"
-              textStyle="xsSpan"
+              textStyle="xxsSpan"
               fontWeight="bold"
               lineHeight={0}
               color={span}

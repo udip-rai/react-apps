@@ -20,16 +20,16 @@ export const WeatherHighlightTooltip = () => {
         <Image src={sing_img} />
       </Flex>
       <Flex flexDirection="column">
-        <Badge variant="solid" bg="green" color={myColors?.darker}>
+        <Badge variant="solid" bg="green" color="gray.50">
           Safe and sound
         </Badge>
-        <Badge variant="solid" bg="yellow" color={myColors?.lighter}>
+        <Badge variant="solid" bg="yellow" color="gray.900">
           Moderate
         </Badge>
-        <Badge variant="solid" bg="good_orange" color={myColors?.lighter}>
+        <Badge variant="solid" bg="good_orange" color="gray.900">
           Risky area
         </Badge>
-        <Badge variant="solid" bg="red" color={myColors?.darker}>
+        <Badge variant="solid" bg="red" color="gray.50">
           Danger zone
         </Badge>
       </Flex>

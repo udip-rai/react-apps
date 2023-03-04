@@ -99,3 +99,9 @@
     - http-equiv="Content-Security-Policy"
     - content="upgrade-insecure-requests"
 - Added a popover on footer
+
+### git commit -m "09 - Added Tutorials Page and made some UI/UX changes"
+
+- Changed text sizes in mobile views & logo design
+- Added a ton of images (exactly 9)
+- Tooltip now works on all devices including mobile events (mouseEnter, onMouseLeave, click)

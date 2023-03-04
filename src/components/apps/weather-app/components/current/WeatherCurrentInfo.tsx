@@ -11,11 +11,14 @@ export const WeatherCurrentInfo = (props: WeatherCurrentInfoProps) => {
     description = readableString(msg!, " ");
 
   return (
-    <Flex w="full" justify="space-between" textStyle="xsText">
-      <Text textStyle="smText" display={showFromLg}>
-        {description}
-      </Text>
-      <Text textStyle="smText" display={hideFromLg}>
+    <Flex
+      w="full"
+      justify="space-between"
+      textStyle="xxsText"
+      fontWeight="bold"
+    >
+      <Text display={showFromLg}>{description}</Text>
+      <Text display={hideFromLg}>
         {description.slice(0, description.length - 5)}
       </Text>
       <Text color={myColors?.span} fontWeight="bold" display={showFromMd}>

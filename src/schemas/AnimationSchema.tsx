@@ -4,6 +4,7 @@ export type InfoTooltipLabelProps = {
 
 export interface InfoTooltipProps extends InfoTooltipLabelProps {
   children: any;
+  isLabelOpen: boolean;
 }
 
 export type CustomPopoverProps = {

@@ -31,12 +31,13 @@ const InfoTooltipLabel = (props: InfoTooltipLabelProps) => {
 
 export const InfoTooltip = (props: InfoTooltipProps) => {
   const { myColors } = useContext(CustomColorsContext);
-  const { children, details } = props;
+  const { children, details, isLabelOpen } = props;
 
   const props1 = { details };
 
   return (
     <Tooltip
+      isOpen={isLabelOpen}
       hasArrow
       arrowSize={12}
       py={2}

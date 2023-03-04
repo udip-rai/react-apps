@@ -20,6 +20,17 @@
       "href": "/websites",
       "license": "https://www.flaticon.com/free-sticker/design-software_4359784",
       "details": ["Responsive in all pixels", "Interactive UI/UX", "Scalable"]
+    },
+    {
+      "title": "Tutorials",
+      "img": "home/studying.png",
+      "href": "/tutorials",
+      "license": "https://www.flaticon.com/free-sticker/studying_4524463",
+      "details": [
+        "As the name suggests",
+        "Concepts in brief",
+        "Never a waste of time"
+      ]
     }
   ]
 }

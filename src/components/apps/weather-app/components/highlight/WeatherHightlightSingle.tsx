@@ -7,7 +7,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { CustomColorsContext } from "context";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { WeatherHightlightSingleProps } from "schemas/apps/WeatherAppSchema";
 import { compareWeather } from "utils/logic";
 import { WeatherHighlightSlider } from "./WeatherHighlightSlider";
@@ -18,6 +18,8 @@ export const WeatherHightlightSingle = (
   props: WeatherHightlightSingleProps
 ) => {
   const { myColors } = useContext(CustomColorsContext);
+  const [isLabelOpen, setIsLabelOpen] = useState<boolean>(false);
+
   const { title, unit, slider, highlight, monster } = props,
     currentStatus = compareWeather(highlight[0], highlight[1]),
     arrowColor = useColorModeValue("#8952e0f0", "#b795eccc"),
@@ -41,6 +43,7 @@ export const WeatherHightlightSingle = (
         />
         <Box className="monster-img">
           <Tooltip
+            isOpen={isLabelOpen}
             hasArrow
             placement="left"
             label={<WeatherHighlightTooltip />}
@@ -49,7 +52,12 @@ export const WeatherHightlightSingle = (
             arrowSize={10}
             p={0}
           >
-            <Image src={require(`assets/images/monsters/${monster}`)} />
+            <Image
+              src={require(`assets/images/monsters/${monster}`)}
+              onMouseEnter={() => setIsLabelOpen(true)}
+              onMouseLeave={() => setIsLabelOpen(false)}
+              onClick={() => setIsLabelOpen(true)}
+            />
           </Tooltip>
         </Box>
       </Flex>
