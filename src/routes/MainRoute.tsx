@@ -1,9 +1,8 @@
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import { Layout } from "components/layout/Layout";
-import { HomePage, ProgrammingPage, WebsitesPage, TutorialsPage } from "pages";
+import { HomePage, ProgrammingPage, WebsitesPage, TriviaPage } from "pages";
 import { AppsPageRoute } from "./apps/AppsPageRoute";
-
-export {};
+import { TutorialsPageRoute } from "./tutorials/TutorialsPageRoute";
 
 export const MainRoute = () => {
   return (
@@ -15,7 +14,8 @@ export const MainRoute = () => {
             <Route path="apps/*" element={<AppsPageRoute />} />
             <Route path="websites" element={<WebsitesPage />} />
             <Route path="programming" element={<ProgrammingPage />} />
-            <Route path="tutorials" element={<TutorialsPage />} />
+            <Route path="tutorials/*" element={<TutorialsPageRoute />} />
+            <Route path="trivia" element={<TriviaPage />} />
           </Route>
         </Route>
       </Routes>

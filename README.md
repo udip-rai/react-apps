@@ -2,6 +2,11 @@
 
 ## Todos
 
+**Bugs**
+
+- The title will appear in every page (even if the page fails to load body as the header & footer are loaded when the body cant)
+-
+
 **Weather app**
 
 - Modify the toast error msg into something more meaningful as -
@@ -111,3 +116,15 @@
 - Created a folder structure for chatting app
 - Added required files (so far)
 - Minimized some css changes from previous project
+
+### git commit -m "11 - Chatting App - Firebase setup + login/register page"
+
+- Added firebase with yarn and made a web app at [Firebase Web App](https://console.firebase.google.com/)
+- For firebase config inside the console.firebase.google.com/your_project:
+  - Enabled Authentication with Email/Password
+  - Enabled the firestore database, realtime database, storage in production mode
+- Copied SDKs from project app and initalized firebase config for auth, firestore, storage
+- Removed Formik as it was no longer reliable (possibly abandoned, inactive for 2 years)
+  - so used React Hook Form instead
+- Create a login form & register form that authenticates with Firebase
+- Managed protected and private routes for chatting login, register, welcome pages

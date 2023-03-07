@@ -1,2 +1,6 @@
-export { ChattingAppCss } from "./ChattingAppCss";
+export {
+  ChattingAppCss,
+  ChattingFormCss,
+  ChattingHomeCss,
+} from "./ChattingAppCss";
 export { WeatherAppCss } from "./WeatherAppCss";

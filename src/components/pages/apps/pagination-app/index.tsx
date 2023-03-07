@@ -1,0 +1,1 @@
+export { PaginationApp } from "./PaginationApp";

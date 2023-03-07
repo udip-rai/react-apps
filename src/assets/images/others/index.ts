@@ -12,7 +12,6 @@ export { default as read3_img } from "./read3.png";
 export { default as reading_img } from "./reading.png";
 export { default as reading1_img } from "./reading1.png";
 export { default as reading2_img } from "./reading2.png";
-export { default as searching_img } from "./searching.png";
 export { default as setting_img } from "./setting.png";
 export { default as website_img } from "./website.png";
 export { default as web_development_img } from "./web-development.png";

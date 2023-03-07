@@ -1,9 +1,9 @@
 import { Grid } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import { ChattingBox } from "./components/box";
-import { ChattingUsers } from "./components/users";
+import { ChattingBox } from "../components/box";
+import { ChattingUsers } from "../components/users";
 
-export const ChattingApp = () => {
+export const ChattingWelcome = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
 
   const commonProps = { isSidebarOpen, setIsSidebarOpen };
@@ -20,6 +20,7 @@ export const ChattingApp = () => {
       h="100%"
       w="768px"
       margin="0 auto"
+      borderRadius="2rem"
       // minH="100vh"
       gridTemplateAreas={`"chatting-users chatting-box" "chatting-users chatting-box"`}
       gridTemplateRows="0 100%"

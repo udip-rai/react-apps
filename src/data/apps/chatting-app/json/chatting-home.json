@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Register",
+    "img": "apps/chatting-app/register.png",
+    "href": "register",
+    "details": ["Already have an account? Sign in."],
+    "license": "https://www.flaticon.com/free-sticker/login_6858064"
+  },
+  {
+    "title": "Login",
+    "img": "apps/chatting-app/login.png",
+    "href": "login",
+    "details": ["No account? Sign up."],
+    "license": "https://www.flaticon.com/free-sticker/log-in_8662284"
+  }
+]

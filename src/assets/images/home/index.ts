@@ -11,6 +11,7 @@ export { default as programming_img } from "./programming.png";
 export { default as programming1_img } from "./programming1.png";
 export { default as retro_img } from "./retro.png";
 export { default as televison_img } from "./television.png";
+export { default as searching_img } from "./searching.png";
 export { default as studying_img } from "./studying.png";
 export { default as update_img } from "./update.png";
 export { default as responsive_website_img } from "./responsive-website.png";

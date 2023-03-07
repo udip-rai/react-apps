@@ -5,7 +5,7 @@ import homeJson from "data/home.json";
 export const HomePage = () => {
   return (
     <Grid className="home-page grid-cards">
-      {homeJson[0]?.map((item: any, i: number) => {
+      {homeJson?.map((item: any, i: number) => {
         return (
           <CardFlex
             key={item.title + item.href + item.img}

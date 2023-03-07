@@ -11,14 +11,14 @@ export const iconSize = ["18px", "18px", "18px", "25px"];
 //   "calc(100vh - 70px - 70px)",
 // ];
 
-// Z Index
 export const Z_INDEX = [0, 1, 10];
+export const ALLOWED_IMG_FORMAT = ["jpg", "jpeg", "png"];
 
 // Toast Messages
 export const TOAST_ERROR_MSG: any = (err: any) => {
   return {
     title: err.toString(),
-    description: "Please input a proper city name.",
+    description: "Please input proper value(s).",
     status: "error",
     duration: 5000,
     isClosable: true,

@@ -1,4 +1,5 @@
 import { Menu, MenuButton, Avatar, MenuList, MenuItem } from "@chakra-ui/react";
+import { ChattingLogout } from "../../login-register/ChattingLogout";
 
 export const ChattingBoxHeaderMenu = () => {
   return (
@@ -16,6 +17,9 @@ export const ChattingBoxHeaderMenu = () => {
         </MenuItem>
         <MenuItem as="a" href="#">
           Link 2
+        </MenuItem>
+        <MenuItem as="a" href="#">
+          <ChattingLogout />
         </MenuItem>
       </MenuList>
     </Menu>

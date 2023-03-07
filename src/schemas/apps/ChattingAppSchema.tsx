@@ -10,3 +10,12 @@ export type CustomIconButtonProps = {
   left: string | number;
   handleClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
 };
+
+export type ChattingDeleteDialogProps = {
+  isOpen: boolean;
+  cancelRef: any;
+  onClose: () => void;
+  item?: any;
+  msg: string;
+  handleDeleteOnClick: any;
+};

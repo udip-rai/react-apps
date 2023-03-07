@@ -1,5 +1,10 @@
 import { StyleFunctionProps } from "@chakra-ui/react";
-import { WeatherAppCss } from "./apps";
+import {
+  ChattingAppCss,
+  ChattingHomeCss,
+  ChattingFormCss,
+  WeatherAppCss,
+} from "./apps";
 import { removeBlur, scrollbarOne } from "./global/AnimationCss";
 import { body } from "./global/BaseCss";
 import { cardFlex, gridCards } from "./global/CardFlexCss";
@@ -25,5 +30,10 @@ export const styles = {
 
     // apps/weather-app
     ".weather-app": WeatherAppCss(props),
+
+    // apps/chatting-app
+    ".chatting-app": ChattingAppCss(props),
+    ".chatting-form": ChattingFormCss(props),
+    ".chatting-home": ChattingHomeCss(props),
   }),
 };

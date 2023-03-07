@@ -10,6 +10,7 @@ export const ChattingBox = (props: IsSidebarOpenProps) => {
       area="chatting-box"
       display="flex"
       flexDirection="column"
+      borderRadius="1rem"
     >
       <ChattingBoxHeader {...props} />
       <ChattingBoxHistory />

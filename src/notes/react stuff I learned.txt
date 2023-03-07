@@ -1,5 +1,18 @@
 1. We need to restart the server if we change the tsconfig.json file.
+The tsconfig.json file specifies the root files and the compiler options required to compile the project. JavaScript projects can use a jsconfig.json file instead, which acts almost the same but has some JavaScript-related compiler flags enabled by default.
 
 2. Always wrap a component with provider if you want to apply context on it.
+Consumer. This tells Context API the wrapped component is a consumer (meaning it has access to global state). Thus, we make the passed-in Component parameter a child of AppContext. Consumer, as well as passing it our global context through an arrow function.
 
-3.
+3. Double braces in value={{}} means?
+{ .. } evaluates to an expression in JSX.
+{ key: value } implies a javascript object.
+
+4. What is the useEffect cleanup function? 
+Just like the name implies, the useEffect cleanup is a function in the useEffect Hook that allows us to tidy up our code before our component unmounts. When our code runs and reruns for every render, useEffect also cleans up after itself using the cleanup function. The cleanup can prevent memory leaks and remove unwanted things.
+
+5. Does useEffect happen 2 times always?
+Yes, you read that right, it prints Call! twice. Specifically, this component is mounted, then unmounted, and then remounted. This also means that when you fetch data in useEffect, it will be sent twice!
+
+6. What does replace in Navigate do?
+Normally a call to navigate will push a new entry into the history stack so the user can click the back button to get back to the page. If you pass replace: true to navigate then the current entry in the history stack will be replaced with the new one.

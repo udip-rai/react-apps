@@ -2,3 +2,8 @@ Todos
 Weather app
 - Modify the toast error msg into something more meaningful as Error 400, Type Error etc are hard to catch for non-programmers/field
 - Create a hook that that calls axios requests in 1 call
+
+
+Chatting app
+- Make button css same for register/login
+- 

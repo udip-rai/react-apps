@@ -18,6 +18,7 @@ https://www.flaticon.com/free-sticker/office_6119572
 https://www.flaticon.com/free-sticker/responsive-website_6858076
 https://www.flaticon.com/free-sticker/online-learning_4681587
 https://www.flaticon.com/free-sticker/studying_4524463
+https://www.flaticon.com/free-sticker/searching_8348896
 
 
 [================ /images/errors ================]
@@ -30,7 +31,6 @@ https://www.flaticon.com/free-sticker/security_9394534
 [================ /images/others ================]
 https://www.flaticon.com/free-sticker/website_9821269
 https://www.flaticon.com/free-sticker/website_9821342
-https://www.flaticon.com/free-sticker/searching_8348896
 https://www.flaticon.com/free-sticker/web-development_7648318
 https://www.flaticon.com/free-sticker/coding_6858041
 https://www.flaticon.com/free-sticker/copywriting_7749210
@@ -47,10 +47,6 @@ https://www.flaticon.com/free-sticker/reading_9747350
 https://www.flaticon.com/free-sticker/read_7596108
 https://www.flaticon.com/free-sticker/read_7182812
 https://www.flaticon.com/free-sticker/read_7182833
-
-
-[================ /images/weather ================]
-https://www.freepik.com/free-vector/weather-icons-flat-set_3815822.htm#query=weather%20icon&position=8&from_view=keyword&track=ais
 
 
 [================ /images/police ================]
@@ -91,3 +87,19 @@ https://www.flaticon.com/free-icon/code_1828231
 https://www.flaticon.com/free-icon/coding_876019
 https://www.flaticon.com/free-icon/coding-language_2721593
 https://www.flaticon.com/free-icon/coding_3242257
+
+
+[================ /images/tutorials ================]
+https://www.flaticon.com/free-sticker/user_6858097
+
+------------------------------------------------------------
+------------------------------------------------------------
+APPS SECTION
+------------------------------------------------------------
+------------------------------------------------------------
+[================ /images/apps/weather-app ================]
+https://www.freepik.com/free-vector/weather-icons-flat-set_3815822.htm#query=weather%20icon&position=8&from_view=keyword&track=ais
+
+
+[================ /images/apps/chatting-app ================]
+https://www.flaticon.com/free-sticker/log-in_8662284

@@ -9,7 +9,13 @@ import { MdAddAPhoto } from "react-icons/md";
 
 export const ChattingBoxMessage = () => {
   return (
-    <Flex bg="teal" height="50px" justifyContent="center" alignItems="center">
+    <Flex
+      bg="teal"
+      height="50px"
+      justifyContent="center"
+      alignItems="center"
+      borderBottomRadius="1rem"
+    >
       <Box gap={4} w="full" px={3}>
         <InputGroup>
           <InputLeftElement

@@ -5,7 +5,7 @@ import appsJson from "data/apps.json";
 export const AppsPage = () => {
   return (
     <Grid className="apps-page grid-cards">
-      {appsJson[0]?.map((item, i: number) => {
+      {appsJson?.map((item, i: number) => {
         return (
           <CardFlex
             key={item.title + item.img}

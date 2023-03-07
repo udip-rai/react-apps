@@ -1,0 +1,13 @@
+[
+  {
+    "title": "React Hook Form",
+    "img": "tutorials/react-hook-form.png",
+    "href": "react-hook-form",
+    "details": [
+      "Minimal lib. (replaces Formik)",
+      "No other dependencies",
+      "Validates Forms"
+    ],
+    "license": "https://www.flaticon.com/free-sticker/user_6858097"
+  }
+]

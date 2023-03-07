@@ -6,7 +6,7 @@ import { weatherJson } from "data/apps/weather-app/json";
 import { WeatherHighlightSun } from "./WeatherHighlightSun";
 import { WeatherHighlightTemp } from "./WeatherHighlightTemp";
 import { WeatherHightlightSingle } from "./WeatherHightlightSingle";
-import { calculateSunMoonDiff } from "../../../../../utils/logic/calculateSunMoon";
+import { calculateSunMoonDiff } from "utils/logic/calculateSunMoon";
 
 export const WeatherHighlight = (props: WeatherHighlightProps) => {
   const { currentDay, dailyDay, degree, handleDegree, timezone } = props;

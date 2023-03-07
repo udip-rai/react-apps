@@ -1,36 +1,48 @@
-{
-  "0": [
-    {
-      "title": "Programming",
-      "img": "home/programming.png",
-      "href": "/programming",
-      "license": "https://www.flaticon.com/free-sticker/responsive-website_6858076",
-      "details": ["Python, Java, JS, PHP", "Career Motive", "Keeping it trendy"]
-    },
-    {
-      "title": "Apps",
-      "img": "home/retro.png",
-      "href": "/apps",
-      "license": "https://www.flaticon.com/free-sticker/retro_5928440",
-      "details": ["Dynamic UI/UX", "React TypeScript", "NodeJs"]
-    },
-    {
-      "title": "Websites",
-      "img": "home/design-software.png",
-      "href": "/websites",
-      "license": "https://www.flaticon.com/free-sticker/design-software_4359784",
-      "details": ["Responsive in all pixels", "Interactive UI/UX", "Scalable"]
-    },
-    {
-      "title": "Tutorials",
-      "img": "home/studying.png",
-      "href": "/tutorials",
-      "license": "https://www.flaticon.com/free-sticker/studying_4524463",
-      "details": [
-        "As the name suggests",
-        "Concepts in brief",
-        "Never a waste of time"
-      ]
-    }
-  ]
-}
+[
+  {
+    "title": "Programming",
+    "img": "home/programming.png",
+    "href": "/programming",
+    "details": ["Python, Java, JS, PHP", "Career Motive", "Keeping it trendy"],
+    "license": "https://www.flaticon.com/free-sticker/responsive-website_6858076"
+  },
+  {
+    "title": "Apps",
+    "img": "home/retro.png",
+    "href": "/apps",
+    "details": ["Dynamic UI/UX", "React TypeScript", "NodeJs"],
+    "license": "https://www.flaticon.com/free-sticker/retro_5928440"
+  },
+  {
+    "title": "Websites",
+    "img": "home/design-software.png",
+    "href": "/websites",
+
+    "details": ["Responsive in all pixels", "Interactive UI/UX", "Scalable"],
+    "license": "https://www.flaticon.com/free-sticker/design-software_4359784"
+  },
+  {
+    "title": "Tutorials",
+    "img": "home/studying.png",
+    "href": "/tutorials",
+
+    "details": [
+      "As the name suggests",
+      "Concepts in brief",
+      "Never a waste of time"
+    ],
+    "license": "https://www.flaticon.com/free-sticker/studying_4524463"
+  },
+  {
+    "title": "Trivia",
+    "img": "home/searching.png",
+    "href": "/trivia",
+
+    "details": [
+      "Subconscious thoughts",
+      "Dematerialize misconceptions",
+      "Ask me anything"
+    ],
+    "license": "https://www.flaticon.com/free-sticker/studying_4524463"
+  }
+]
